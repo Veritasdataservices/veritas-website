@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Veritas Data Services — Data Transformed</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+      </a>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#" id="openApplyBtn">Apply</a>
+        <a href="#" id="openCoursesNav">Courses</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO SECTION (with slideshow) -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-media">
+          <img id="heroImage" src="assets/images/veritas_logo_banner.jpg" alt="veritassecond.jpg" />
+        </div>
+
+        <div class="hero-text">
+          <h1>Data Transformed. Decisions Empowered.</h1>
+          <p class="lead">Veritas Data Services — Where insight meets impact. Real-world analytics, honest teaching, measurable results.</p>
+          <div class="hero-cta">
+            <button class="btn primary" id="applyPopupBtn">Apply for Course/Internship</button>
+            <button class="btn ghost" id="openCoursesBtn">See Our Courses</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container about">
+      <h2>What Our Founder Says</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Lately, I have been watching the wave of online “courses” and mentorship programs flood the data world and I have to admit something uncomfortable: many of them are not built for learning. They’re built for sales.
+          </p>
+          <p>
+            And I say this not from judgement, but from experience. I have been on both sides, the student searching for clarity and the professional building something real.
+          </p>
+          <p>
+            So when I decided to create Veritas Data Services, I made a promise to myself. <strong>We won’t just teach what sounds good. We will teach what works.</strong> The same tools, workflows, and projects we actually use.
+          </p>
+          <blockquote>“That was worth every coin because I can do the work now.”</blockquote>
+          <p class="signature">Founder, Veritas Data Services</p>
+        </div>
+
+        <div class="about-image">
+          <img src="assets/images/Veritas_founder_message.jpg" alt="Founder's message" />
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section id="services" class="container services">
+      <h2>What We Do</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Consulting & Strategy</h3>
+          <p>Data-driven advisory and decision support that converts analytics into action.</p>
+        </article>
+        <article class="card">
+          <h3>Analytics & Reporting</h3>
+          <p>Dashboards, performance tracking, and action-oriented reporting for leaders and teams.</p>
+        </article>
+        <article class="card">
+          <h3>Training & Knowledge</h3>
+          <p>Hands-on courses, real-world projects, and internship programs that build practical skills.</p>
+        </article>
+        <article class="card">
+          <h3>Automation & Workflows</h3>
+          <p>Automate recurring data tasks (ingest → transform → report), build reliable pipelines, and save hours every week.</p>
+        </article>
+        <article class="card">
+          <h3>Specialized Insights</h3>
+          <p>Sector-specific intelligence (FinTech, healthcare, retail) for emerging markets and growth decisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COURSES POPUP -->
+    <div id="coursesPopup" class="popup-overlay" aria-hidden="true">
+      <div class="popup-content">
+        <button class="popup-close" id="closeCoursesPopup">&times;</button>
+        <h2>🎓 Our Courses & Masterclasses</h2>
+        <ul>
+          <li><strong>Data Analytics Masterclass:</strong> Excel, SQL, Tableau, and Python projects.</li>
+          <li><strong>AI for Business & Strategy:</strong> Learn AI in simple business terms.</li>
+          <li><strong>Automation & Workflows:</strong> Build dashboards and automate reporting.</li>
+          <li><strong>Data-Driven Social Media Strategy:</strong> Learn how data guides engagement and monetization.</li>
+          <li><strong>Veritas Internship Program:</strong> A guided 4-week hands-on experience.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- APPLY POPUP -->
+    <div id="applyPopup" class="popup-overlay" aria-hidden="true">
+      <div class="popup-content">
+        <button class="popup-close" id="closeApplyPopup">&times;</button>
+        <h2>Apply: Internship / Courses</h2>
+        <p>Fill the short form below — it will open directly in your email app.</p>
+
+        <form id="applyForm">
+          <label>Full name
+            <input type="text" id="user_name" placeholder="Your full name" required>
+          </label>
+          <label>Email
+            <input type="email" id="user_email" placeholder="you@example.com" required>
+          </label>
+          <label>Short message (skills/notes)
+            <textarea id="message" rows="4" placeholder="Tell us briefly about your skills or why you apply"></textarea>
+          </label>
+          <label>Interested in
+            <select id="role">
+              <option>Online Internship</option>
+              <option>Online Data Analytics Masterclass Course</option>
+              <option>Online AI Masterclass (Business & personal)</option>
+              <option>Online Data Automation Masterclass</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn primary">Send Application</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="site-footer container">
+      <div class="footer-grid">
+        <div>
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></p>
+          <p>Phone / WhatsApp: <a href="tel:+254114815449">+254 114 815 449</a></p>
+        </div>
+
+        <div>
+          <h3>Follow</h3>
+          <ul class="social">
+            <li><a href="https://instagram.com/veritas_dataservices" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/veritas-data-services" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/veritasdataservices" target="_blank">Facebook</a></li>
+            <li><a href="https://github.com/VeritasDataServices" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">Developed by Veritas Data Services © <span id="year"></span></p>
+    </footer>
+  </main>
+
+  <script>
+    // Year update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Hero image slideshow (changes every 2 minutes)
+    const heroImages = [
+      "assets/images/veritassecond.jpg",
+      "assets/images/veritas_logo_banner.jpg"
+    ];
+    let currentImage = 0;
+    const heroImg = document.getElementById("heroImage");
+    setInterval(() => {
+      currentImage = (currentImage + 1) % heroImages.length;
+      heroImg.src = heroImages[currentImage];
+    }, 10000); // 10,000 ms = 10 seconds
+
+    // Popup handling
+    const popups = {
+      courses: document.getElementById('coursesPopup'),
+      apply: document.getElementById('applyPopup')
+    };
+    const openButtons = {
+      courses: [document.getElementById('openCoursesBtn'), document.getElementById('openCoursesNav')],
+      apply: [document.getElementById('applyPopupBtn'), document.getElementById('openApplyBtn')]
+    };
+    const closeButtons = {
+      courses: document.getElementById('closeCoursesPopup'),
+      apply: document.getElementById('closeApplyPopup')
+    };
+
+    Object.keys(openButtons).forEach(type => {
+      openButtons[type].forEach(btn => btn.addEventListener('click', e => {
+        e.preventDefault();
+        popups[type].style.display = 'flex';
+      }));
+    });
+    Object.keys(closeButtons).forEach(type => {
+      closeButtons[type].addEventListener('click', () => popups[type].style.display = 'none');
+    });
+    Object.values(popups).forEach(p => p.addEventListener('click', e => { if (e.target === p) p.style.display = 'none'; }));
+
+    // Mailto send
+    document.getElementById('applyForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('user_name').value;
+      const email = document.getElementById('user_email').value;
+      const message = document.getElementById('message').value;
+      const role = document.getElementById('role').value;
+
+      const subject = encodeURIComponent(`Application for ${role}`);
+      const body = encodeURIComponent(`Full Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+      window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
