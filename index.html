@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Veritas Data Services — Data Transformed</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home">
+        <img src="veritas_logo_banner.jpg" alt="Veritas Logo" class="logo" />
       </a>
       <nav class="nav">
         <a href="#home">Home</a>
@@ -25,11 +26,11 @@
 
   <!-- MAIN -->
   <main>
-    <!-- HERO SECTION (with slideshow) -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-media">
-          <img id="heroImage" src="assets/images/veritas_logo_banner.jpg" alt="veritassecond.jpg" />
+          <img id="heroImage" src="veritas_logo_banner.jpg" alt="Veritas Banner" />
         </div>
 
         <div class="hero-text">
@@ -49,25 +50,25 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            Lately, I have been watching the wave of online “courses” and mentorship programs flood the data world and I have to admit something uncomfortable: many of them are not built for learning. They’re built for sales.
+            Lately, I have been watching the wave of online “courses” and mentorship programs flood the data world, and I have to admit something uncomfortable: many of them are not built for learning. They’re built for sales.
           </p>
           <p>
-            And I say this not from judgement, but from experience. I have been on both sides, the student searching for clarity and the professional building something real.
+            And I say this not from judgment, but from experience. I have been on both sides — the student searching for clarity and the professional building something real.
           </p>
           <p>
-            So when I decided to create Veritas Data Services, I made a promise to myself. <strong>We won’t just teach what sounds good. We will teach what works.</strong> The same tools, workflows, and projects we actually use.
+            So when I decided to create Veritas Data Services, I made a promise to myself: <strong>We won’t just teach what sounds good. We will teach what works.</strong> The same tools, workflows, and projects we actually use.
           </p>
           <blockquote>“That was worth every coin because I can do the work now.”</blockquote>
           <p class="signature">Founder, Veritas Data Services</p>
         </div>
 
         <div class="about-image">
-          <img src="assets/images/Veritas_founder_message.jpg" alt="Founder's message" />
+          <img src="Veritas_founder_message.jpg" alt="Founder Message" />
         </div>
       </div>
     </section>
 
-    <!-- WHAT WE DO -->
+    <!-- SERVICES -->
     <section id="services" class="container services">
       <h2>What We Do</h2>
       <div class="cards">
@@ -129,8 +130,8 @@
           <label>Interested in
             <select id="role">
               <option>Online Internship</option>
-              <option>Online Data Analytics Masterclass Course</option>
-              <option>Online AI Masterclass (Business & personal)</option>
+              <option>Online Data Analytics Masterclass</option>
+              <option>Online AI Masterclass (Business & Personal)</option>
               <option>Online Data Automation Masterclass</option>
             </select>
           </label>
@@ -164,22 +165,16 @@
   </main>
 
   <script>
-    // Year update
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Hero image slideshow (changes every 2 minutes)
-    const heroImages = [
-      "images/veritassecond.jpg",
-      "images/veritas_logo_banner.jpg"
-    ];
+    const heroImages = ["veritassecond.jpg", "veritas_logo_banner.jpg"];
     let currentImage = 0;
     const heroImg = document.getElementById("heroImage");
     setInterval(() => {
       currentImage = (currentImage + 1) % heroImages.length;
       heroImg.src = heroImages[currentImage];
-    }, 10000); // 10,000 ms = 10 seconds
+    }, 10000);
 
-    // Popup handling
     const popups = {
       courses: document.getElementById('coursesPopup'),
       apply: document.getElementById('applyPopup')
@@ -204,22 +199,21 @@
     });
     Object.values(popups).forEach(p => p.addEventListener('click', e => { if (e.target === p) p.style.display = 'none'; }));
 
-    // Mailto send
     document.getElementById('applyForm').addEventListener('submit', function(e){
       e.preventDefault();
       const name = document.getElementById('user_name').value;
       const email = document.getElementById('user_email').value;
       const message = document.getElementById('message').value;
       const role = document.getElementById('role').value;
-
       const subject = encodeURIComponent(`Application for ${role}`);
       const body = encodeURIComponent(`Full Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
       window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
     });
   </script>
 </body>
 </html>
+
+
 
 
 
