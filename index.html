@@ -81,6 +81,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#" id="openApplyBtn">Apply</a>
+        <a href="#" id="openConsultPopup">Consultation</a>
         <a href="#" id="openCoursesNav">Courses</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -203,6 +204,19 @@
         </form>
       </div>
     </div>
+    <!-- CONSULTATION POPUP -->
+<div id="consultPopup" class="popup-overlay" aria-hidden="true">
+  <div class="popup-content">
+    <button class="popup-close" id="closeConsultPopup">&times;</button>
+    <h2>Book a Consultation</h2>
+    <p>Select your preferred way to reach Veritas Data Services:</p>
+    <ul style="list-style:none; padding-left:0;">
+      <li>📧 <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></li>
+      <li>💬 <a href="https://wa.me/254114815449" target="_blank">WhatsApp / Call: +254 114 815 449</a></li>
+    </ul>
+    <p>We'll respond within one business day to schedule your session.</p>
+  </div>
+</div>
 
     <!-- FOOTER -->
     <footer id="contact" class="site-footer container">
@@ -271,10 +285,34 @@
       const subject = encodeURIComponent(`Application for ${role}`);
       const body = encodeURIComponent(`Full Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
       window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
-    });
+      // Consultation popup handling
+const consultPopup = document.getElementById('consultPopup');
+document.getElementById('openConsultPopup').addEventListener('click', e => {
+  e.preventDefault();
+  consultPopup.style.display = 'flex';
+});
+document.getElementById('closeConsultPopup').addEventListener('click', () => {
+  consultPopup.style.display = 'none';
+});
+consultPopup.addEventListener('click', e => {
+  if (e.target === consultPopup) consultPopup.style.display = 'none';
+});
+
+// existing form submission code below
+document.getElementById('applyForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('user_name').value;
+  const email = document.getElementById('user_email').value;
+  const message = document.getElementById('message').value;
+  const role = document.getElementById('role').value;
+  const subject = encodeURIComponent(`Application for ${role}`);
+  const body = encodeURIComponent(`Full Name: ${name}\nEmail: ${email}\nMessage:\n${message}`);
+  window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
+});
   </script>
 </body>
 </html>
+
 
 
 
