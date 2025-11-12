@@ -15,7 +15,7 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* Header */
 .site-header {
   background: #1f4730;
   color: white;
@@ -32,9 +32,10 @@ body {
   justify-content: space-between;
   gap: 1rem;
 }
-.brand img.logo {
-  height: 56px;
-  object-fit: contain;
+.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
 .nav a {
   color: #cfe6da;
@@ -138,7 +139,7 @@ body {
   border-radius: 8px;
 }
 
-/* SERVICES */
+/* WHAT WE DO (cards) */
 .services {
   padding: 2.5rem 1rem;
   background: #f4f9f6;
@@ -172,7 +173,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* POPUPS (GENERAL) */
+/* POPUP overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -295,47 +296,26 @@ body {
   color: #fff;
 }
 
-/* ANIMATIONS */
+/* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes scaleUp {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-/* RESPONSIVE DESIGN */
+/* Responsive */
 @media (max-width: 900px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-media {
-    max-width: 320px;
-  }
-  .header-inner {
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-  .nav {
-    text-align: center;
-  }
-  .popup-content {
-    width: 95%;
-    padding: 1.2rem;
-  }
+  .hero-inner { flex-direction: column; text-align: center; }
+  .hero-media { max-width: 320px; }
+  .header-inner { flex-direction: column; gap: 0.6rem; }
+  .nav { text-align: center; }
+  .popup-content { width: 95%; padding: 1.2rem; }
 }
+
+
 
 
 
