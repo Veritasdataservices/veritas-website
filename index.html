@@ -8,26 +8,30 @@
   <meta name="author" content="Veritas Data Services">
   <meta name="robots" content="index, follow">
 
-  <!-- ✅ Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Veritas Data Services — Data Transformed. Decisions Empowered.">
   <meta property="og:description" content="Empowering Africa through AI, data analytics, and automation training. Real datasets, portfolio projects, and mentorship — from Veritas Data Services.">
   <meta property="og:image" content="https://veritasdataservices.com/veritas_logo_banner.jpg">
   <meta property="og:url" content="https://veritasdataservices.com/">
   <meta property="og:type" content="website">
 
-  <!-- ✅ Twitter Card -->
+  <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Veritas Data Services — Data Transformed. Decisions Empowered.">
   <meta name="twitter:description" content="AI-powered data analytics and automation solutions that drive learning and business growth.">
   <meta name="twitter:image" content="https://veritasdataservices.com/veritas_logo_banner.jpg">
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" href="https://veritasdataservices.com/veritas_logo_banner.jpg" type="image/png">
-  
+  <!-- favicon -->
+  <link rel="icon" href="veritas_logo_banner.jpg" type="image/png">
+
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* tiny inline safety: ensure body renders even if CSS temporarily missing */
+    body { visibility: visible; }
+  </style>
 
-  <!-- ✅ Schema Markup -->
+  <!-- Schema (organization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,7 +56,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home"></a>
+      <a class="brand" href="#home">Veritas Data Services</a>
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -71,7 +75,8 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-media">
-          <img id="heroImage" src="assets/images/veritas_logo_banner.jpg" alt="Veritas Banner" />
+          <!-- slideshow uses filenames in root (no folders) -->
+          <img id="heroImage" src="veritas_logo_banner.jpg" alt="Veritas Banner" />
         </div>
         <div class="hero-text">
           <h1>Data Transformed. Decisions Empowered.</h1>
@@ -98,8 +103,10 @@
           <blockquote>“That was worth every coin because I can do the work now.”</blockquote>
           <p class="signature">Founder, Veritas Data Services</p>
         </div>
+
         <div class="about-image">
-          <img src="assets/images/Veritas_founder_message.jpg" alt="Founder Message" loading="lazy" />
+          <!-- founder image in root -->
+          <img src="Veritas_founder_message.jpg" alt="Founder Message" loading="lazy" />
         </div>
       </div>
     </section>
@@ -137,14 +144,20 @@
         <button class="popup-close" id="closeApplyPopup">&times;</button>
         <h2>Apply: Internship / Courses</h2>
         <form id="applyForm">
-          <label>Full name <input type="text" id="user_name" placeholder="Your full name" required></label>
-          <label>Email <input type="email" id="user_email" placeholder="you@example.com" required></label>
-          <label>Short message<textarea id="message" rows="4" placeholder="Tell us briefly about your skills"></textarea></label>
+          <label>Full name
+            <input type="text" id="user_name" placeholder="Your full name" required>
+          </label>
+          <label>Email
+            <input type="email" id="user_email" placeholder="you@example.com" required>
+          </label>
+          <label>Short message
+            <textarea id="message" rows="4" placeholder="Tell us briefly about your skills or why you apply"></textarea>
+          </label>
           <label>Interested in
             <select id="role">
               <option>Online Internship</option>
               <option>Online Data Analytics Masterclass</option>
-              <option>Online AI Masterclass</option>
+              <option>Online AI Masterclass (Business & Personal)</option>
               <option>Online Data Automation Masterclass</option>
             </select>
           </label>
@@ -159,9 +172,15 @@
         <button class="popup-close" id="closeConsultPopup">&times;</button>
         <h2>Book a Consultation</h2>
         <form id="consultForm">
-          <label>Full name <input type="text" id="consult_name" placeholder="Your full name" required></label>
-          <label>Email <input type="email" id="consult_email" placeholder="you@example.com" required></label>
-          <label>Message<textarea id="consult_message" rows="3" placeholder="Tell us briefly about your project or need"></textarea></label>
+          <label>Full name
+            <input type="text" id="consult_name" placeholder="Your full name" required>
+          </label>
+          <label>Email
+            <input type="email" id="consult_email" placeholder="you@example.com" required>
+          </label>
+          <label>Message
+            <textarea id="consult_message" rows="3" placeholder="Tell us briefly about your project or need"></textarea>
+          </label>
           <fieldset>
             <legend>Preferred Contact Method:</legend>
             <label><input type="radio" name="contact_method" value="email" required> Email</label>
@@ -184,8 +203,8 @@
           <h3>Follow</h3>
           <ul class="social">
             <li><a href="https://instagram.com/veritas_dataservices" target="_blank">Instagram</a></li>
-            <li><a href="https://linkedin.com/company/veritas-data-services" target="_blank">LinkedIn</a></li>
-            <li><a href="https://facebook.com/veritasdataservices" target="_blank">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/veritas-data-services" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/veritasdataservices" target="_blank">Facebook</a></li>
             <li><a href="https://github.com/VeritasDataServices" target="_blank">GitHub</a></li>
           </ul>
         </div>
@@ -194,23 +213,26 @@
     </footer>
   </main>
 
-  <!-- ✅ SCRIPT -->
+  <!-- SCRIPT -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Update year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    const heroImages = [
-      "assets/images/veritas_logo_banner.jpg",
-      "assets/images/veritassecond.jpg"
-    ];
+    // slideshow using filenames in root
+    const heroImages = ["veritas_logo_banner.jpg", "veritassecond.jpg"];
     let currentImage = 0;
     const heroImg = document.getElementById("heroImage");
     if (heroImg) {
+      // ensure initial image exists
+      heroImg.src = heroImages[0];
       setInterval(() => {
         currentImage = (currentImage + 1) % heroImages.length;
         heroImg.src = heroImages[currentImage];
       }, 10000);
     }
 
+    // popups
     const popups = {
       courses: document.getElementById('coursesPopup'),
       apply: document.getElementById('applyPopup'),
@@ -229,23 +251,28 @@
       consult: document.getElementById('closeConsultPopup')
     };
 
+    // attach open handlers
     Object.keys(openButtons).forEach(type => {
       openButtons[type].forEach(btn => {
         if (btn) {
           btn.addEventListener('click', e => {
             e.preventDefault();
-            popups[type].style.display = 'flex';
+            if (popups[type]) popups[type].style.display = 'flex';
           });
         }
       });
     });
 
+    // attach close handlers
     Object.keys(closeButtons).forEach(type => {
       if (closeButtons[type]) {
-        closeButtons[type].addEventListener('click', () => popups[type].style.display = 'none');
+        closeButtons[type].addEventListener('click', () => {
+          if (popups[type]) popups[type].style.display = 'none';
+        });
       }
     });
 
+    // click outside to close
     Object.values(popups).forEach(p => {
       if (p) {
         p.addEventListener('click', e => {
@@ -254,6 +281,7 @@
       }
     });
 
+    // apply form mailto
     const applyForm = document.getElementById('applyForm');
     if (applyForm) {
       applyForm.addEventListener('submit', function (e) {
@@ -262,13 +290,13 @@
         const email = document.getElementById('user_email').value;
         const message = document.getElementById('message').value;
         const role = document.getElementById('role').value;
-
         const subject = encodeURIComponent(`Application for ${role}`);
         const body = encodeURIComponent(`Full Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
         window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
       });
     }
 
+    // consult form (email or whatsapp)
     const consultForm = document.getElementById('consultForm');
     if (consultForm) {
       consultForm.addEventListener('submit', e => {
@@ -276,23 +304,28 @@
         const name = document.getElementById('consult_name').value;
         const email = document.getElementById('consult_email').value;
         const msg = document.getElementById('consult_message').value;
-        const contactType = document.querySelector('input[name="contact_method"]:checked')?.value;
-
-        if (contactType === "email") {
+        const method = document.querySelector('input[name="contact_method"]:checked')?.value;
+        if (!method) {
+          alert("Please select a contact method before booking.");
+          return;
+        }
+        const text = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`;
+        if (method === "email") {
           const subject = encodeURIComponent("Consultation Request");
-          const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+          const body = encodeURIComponent(text);
           window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
-        } else if (contactType === "whatsapp") {
+        } else {
+          // whatsapp
           const whatsappMsg = encodeURIComponent(`Hello, I'm ${name}. ${msg}`);
           window.open(`https://wa.me/254114815449?text=${whatsappMsg}`, "_blank");
-        } else {
-          alert("Please select a contact method before booking.");
         }
       });
     }
   </script>
 </body>
 </html>
+
+
 
 
 
