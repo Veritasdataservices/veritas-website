@@ -83,12 +83,13 @@ body {
 }
 
 .hero-media img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 6px;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
+    width: auto;
+    max-width: 420px;
+    border-radius: 6px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
 }
+
 
 .hero-text {
   flex: 1;
@@ -355,6 +356,7 @@ legend {
   .nav { text-align: center; }
   .popup-content { width: 95%; padding: 1.2rem; }
 }
+
 
 
 
