@@ -38,7 +38,7 @@ body {
   gap: 1rem;
 }
 
-.brand {
+.brand img.logo { height:56px; object-fit:contain;
   text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ align-items:center;
 }
 
 .hero-media img {
-    width: 100;
+    width: 100%;
     max-width: 420px;
    height: auto;
     border-radius: 6px;
@@ -121,12 +121,12 @@ align-items:center;
   font-weight: 600;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: all 0.25s ease;
 }
 
 .btn.primary {
   background: #1f4730;
   color: #fff;
+   border-color:#1f4730;
 }
 
 .btn.ghost {
@@ -192,7 +192,6 @@ align-items:center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   max-width: 260px;
   flex: 1 1 220px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
@@ -326,7 +325,6 @@ legend {
   color: #e6f2ec;
   text-decoration: none;
   margin: 0.15rem 0;
-  transition: color 0.25s ease;
 }
 
 .social a:hover {
@@ -358,6 +356,7 @@ legend {
   .nav { text-align: center; }
   .popup-content { width: 95%; padding: 1.2rem; }
 }
+
 
 
 
