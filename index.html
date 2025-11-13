@@ -202,71 +202,95 @@
 
   <!-- SCRIPT -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    const heroImages = ["veritas_logo_banner.jpg", "veritassecond.jpg"];
-    let currentImage = 0;
-    const heroImg = document.getElementById("heroImage");
-    setInterval(() => {
-      currentImage = (currentImage + 1) % heroImages.length;
-      heroImg.src = heroImages[currentImage];
-    }, 10000);
+  const heroImages = ["veritas_logo_banner.jpg", "veritassecond.jpg"];
+  let currentImage = 0;
+  const heroImg = document.getElementById("heroImage");
+  setInterval(() => {
+    currentImage = (currentImage + 1) % heroImages.length;
+    heroImg.src = heroImages[currentImage];
+  }, 10000);
 
-    const popups = {
-      courses: document.getElementById('coursesPopup'),
-      apply: document.getElementById('applyPopup'),
-      consult: document.getElementById('consultPopup')
-    };
+  const popups = {
+    courses: document.getElementById('coursesPopup'),
+    apply: document.getElementById('applyPopup'),
+    consult: document.getElementById('consultPopup')
+  };
 
-    function openPopup(p) { p.style.display = "flex"; }
-    function closePopup(p) { p.style.display = "none"; }
+  function openPopup(p) { p.style.display = "flex"; }
+  function closePopup(p) { p.style.display = "none"; }
 
-    document.getElementById('openCoursesBtn').onclick =
-    document.getElementById('openCoursesNav').onclick = e => { e.preventDefault(); openPopup(popups.courses); };
+  document.getElementById('openCoursesBtn').onclick =
+  document.getElementById('openCoursesNav').onclick = e => {
+    e.preventDefault(); openPopup(popups.courses);
+  };
 
-    document.getElementById('applyPopupBtn').onclick =
-    document.getElementById('openApplyBtn').onclick = e => { e.preventDefault(); openPopup(popups.apply); };
+  document.getElementById('applyPopupBtn').onclick =
+  document.getElementById('openApplyBtn').onclick = e => {
+    e.preventDefault(); openPopup(popups.apply);
+  };
 
-    document.getElementById('openConsultPopup').onclick = e => { e.preventDefault(); openPopup(popups.consult); };
+  document.getElementById('openConsultPopup').onclick = e => {
+    e.preventDefault(); openPopup(popups.consult);
+  };
 
-    document.getElementById('closeCoursesPopup').onclick = () => closePopup(popups.courses);
-    document.getElementById('closeApplyPopup').onclick = () => closePopup(popups.apply);
-    document.getElementById('closeConsultPopup').onclick = () => closePopup(popups.consult);
+  document.getElementById('closeCoursesPopup').onclick = () => closePopup(popups.courses);
+  document.getElementById('closeApplyPopup').onclick = () => closePopup(popups.apply);
+  document.getElementById('closeConsultPopup').onclick = () => closePopup(popups.consult);
 
-    Object.values(popups).forEach(p => p.addEventListener("click", e => { if (e.target === p) closePopup(p); }));
+  Object.values(popups).forEach(p =>
+    p.addEventListener("click", e => { if (e.target === p) closePopup(p); })
+  );
 
-    document.getElementById('applyForm').onsubmit = e => {
-  e.preventDefault();
-  const name = document.getElementById('user_name').value;
-  const email = document.getElementById('user_email').value;
-  const message = document.getElementById('apply_message').value;
-  const role = document.getElementById('apply_role').value;
+  /* ---------------------------
+     FIXED APPLY FORM HANDLER
+  --------------------------- */
+  document.getElementById('applyForm').onsubmit = e => {
+    e.preventDefault();
 
-  window.location.href =
-    `mailto:info@veritasdataservices.com?subject=Application%20for%20${encodeURIComponent(role)}&body=${
-      encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + message)
-    }`;
-      
+    const name = document.getElementById('user_name').value;
+    const email = document.getElementById('user_email').value;
+    const message = document.getElementById('apply_message').value;
+    const role = document.getElementById('apply_role').value;
 
- document.getElementById('consultForm').onsubmit = e => {
-      e.preventDefault();
-      const name = consult_name.value;
-      const email = consult_email.value;
-      const msg = consult_message.value;
-      const contact = document.querySelector('input[name="contact_method"]:checked')?.value;
+    window.location.href =
+      `mailto:info@veritasdataservices.com?subject=Application%20for%20${encodeURIComponent(role)}&body=${
+        encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + message)
+      }`;
+  };
 
-      if (!contact) return alert("Please choose email or WhatsApp.");
+  /* -------------------------------
+     FIXED CONSULTATION FORM HANDLER
+  ------------------------------- */
+  document.getElementById('consultForm').onsubmit = e => {
+    e.preventDefault();
 
-      if (contact === "email") {
-        window.location.href = `mailto:info@veritasdataservices.com?subject=Consultation%20Request&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + msg)}`;
-      } else {
-        window.open(`https://wa.me/254114815449?text=${encodeURIComponent("Hello, I'm " + name + ". " + msg)}`, "_blank");
-      }
-    };
-  </script>
+    const name = document.getElementById('consult_name').value;
+    const email = document.getElementById('consult_email').value;
+    const msg = document.getElementById('consult_message').value;
+    const contact = document.querySelector('input[name="contact_method"]:checked')?.value;
+
+    if (!contact) return alert("Please choose email or WhatsApp.");
+
+    if (contact === "email") {
+      window.location.href =
+        `mailto:info@veritasdataservices.com?subject=Consultation%20Request&body=${
+          encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + msg)
+        }`;
+    } else {
+      window.open(
+        `https://wa.me/254114815449?text=${encodeURIComponent("Hello, I'm " + name + ". " + msg)}`,
+        "_blank"
+      );
+    }
+  };
+</script>
+
 
 </body>
 </html>
+
 
 
 
