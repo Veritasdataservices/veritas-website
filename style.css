@@ -356,6 +356,66 @@ legend {
   .nav { text-align: center; }
   .popup-content { width: 95%; padding: 1.2rem; }
 }
+/* ===========================
+   PORTFOLIO DROPDOWN
+=========================== */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: #1f4730;
+  color: #cfe6da;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  z-index: 999;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #1f4730;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background: #e8f3ed;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* HERO BUTTONS SOLID GREEN */
+.hero-cta .btn.primary {
+  background: #009e60;
+  border-color: #009e60;
+}
+
+.hero-cta .btn.primary:hover {
+  background: #007b4d;
+}
+
+
 
 
 
