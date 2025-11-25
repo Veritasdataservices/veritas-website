@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <title>Veritas Data Services — AI-Powered Data Analytics, Automation & Training</title>
+
   <meta name="description" content="Veritas Data Services empowers individuals and businesses with AI-driven data analytics, automation, and visualization solutions. Learn, analyze, and automate with real-world projects and industry guidance.">
   <meta name="keywords" content="Veritas Data Services, data analytics Kenya, AI data analysis, automation, Python, SQL, Tableau, Power BI, data visualization, internship, AI masterclass, Veritas analytics, Veritas Kenya">
   <meta name="author" content="Veritas Data Services">
   <meta name="robots" content="index, follow">
   <meta name="msvalidate.01" content="B4DED5E396CBD70F5087EF98BEB14F24" />
 
-  <!-- Open Graph -->
+  <!-- OG -->
   <meta property="og:title" content="Veritas Data Services — Data Transformed. Decisions Empowered.">
   <meta property="og:description" content="Empowering Africa through AI, data analytics, and automation training. Real datasets, portfolio projects, and mentorship — from Veritas Data Services.">
   <meta property="og:image" content="https://veritasdataservices.com/veritas_logo_banner.jpg">
@@ -44,40 +45,21 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">
-        <!-- If you have a logo image replace with <img src="logo.png" class="logo" alt="Veritas Data Services"> -->
-        <span class="visually-hidden">Veritas Data Services</span>
-      </a>
-
+      <a class="brand" href="#home"></a>
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-
-        <!-- Courses with 🎓 -->
-        <a href="#" id="openCoursesNav">🎓 Courses</a>
-
-        <!-- Portfolio dropdown -->
-        <div class="nav-dropdown">
-          <button id="portfolioToggle" class="nav-btn">Portfolio ▾</button>
-          <div id="portfolioMenu" class="nav-dropdown-menu" aria-hidden="true">
-            <!-- Replace these links if repo names/URLs differ -->
-            <a href="https://github.com/VeritasDataServices/Jumia-Analysis" target="_blank" rel="noopener">Jumia - Sales Analysis</a>
-            <a href="https://github.com/VeritasDataServices/PBJ-Nurse-Staffing-Analysis" target="_blank" rel="noopener">PBJ Nurse Staffing Analysis</a>
-            <a href="https://github.com/VeritasDataServices/veritas-website" target="_blank" rel="noopener">Veritas Website</a>
-          </div>
-        </div>
-
         <a href="#" id="openApplyBtn">Apply</a>
         <a href="#" id="openConsultPopup">Consultation</a>
+        <a href="#" id="openCoursesNav">Courses</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- HERO -->
   <main>
-    <!-- HERO SECTION -->
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-media">
@@ -92,18 +74,7 @@
           </p>
           <div class="hero-cta">
             <button class="btn primary" id="applyPopupBtn">Apply for Course/Internship</button>
-
-            <!-- Hero portfolio button with same dropdown -->
-            <div class="hero-portfolio">
-              <button id="heroPortfolioBtn" class="btn ghost">View Portfolio ▾</button>
-              <div id="heroPortfolioMenu" class="hero-dropdown" aria-hidden="true">
-                <a href="https://github.com/VeritasDataServices/Jumia-Analysis" target="_blank" rel="noopener">Jumia - Sales Analysis</a>
-                <a href="https://github.com/VeritasDataServices/PBJ-Nurse-Staffing-Analysis" target="_blank" rel="noopener">PBJ Nurse Staffing Analysis</a>
-                <a href="https://github.com/VeritasDataServices/veritas-website" target="_blank" rel="noopener">Veritas Website</a>
-              </div>
-            </div>
-
-            <button class="btn ghost" id="openCoursesBtn">🎓 See Our Courses</button>
+            <button class="btn ghost" id="openCoursesBtn">See Our Courses</button>
           </div>
         </div>
       </div>
@@ -135,39 +106,39 @@
         <article class="card"><h3>Analytics & Reporting</h3><p>Dashboards and performance tracking for leaders and teams.</p></article>
         <article class="card"><h3>Training & Knowledge</h3><p>Hands-on courses and internship programs.</p></article>
         <article class="card"><h3>Automation & Workflows</h3><p>Automate tasks end-to-end and save hours every week.</p></article>
-        <article class="card"><h3>Website Development & Design</h3><p>Portfolio and professional websites tailored for data professionals and small businesses.</p></article>
+        <article class="card"><h3>Specialized Insights</h3><p>Sector-specific analysis for growth decisions.</p></article>
       </div>
     </section>
 
     <!-- COURSES POPUP -->
-    <div id="coursesPopup" class="popup-overlay" aria-hidden="true">
+    <div id="coursesPopup" class="popup-overlay">
       <div class="popup-content">
-        <button class="popup-close" id="closeCoursesPopup" aria-label="Close">&times;</button>
+        <button class="popup-close" id="closeCoursesPopup">&times;</button>
         <h2>🎓 Our Courses & Masterclasses</h2>
         <ul>
           <li><strong>Online Data Analytics Masterclass:</strong> Excel, SQL, Tableau, Python.</li>
           <li><strong>Online AI for Business & Strategy</strong></li>
           <li><strong>Online Automation & Workflows</strong></li>
-          <li><strong>Data-Driven Social Media Strategy</strong></li>
-          <li><strong>Veritas Internship Program</strong></li>
+          <li><strong>Online Data-Driven Social Media Strategy</strong></li>
+          <li><strong>Online Veritas Internship Program</strong></li>
         </ul>
       </div>
     </div>
 
-    <!-- APPLY POPUP -->
-    <div id="applyPopup" class="popup-overlay" aria-hidden="true">
+    <!-- APPLY POPUP (REBUILT SAME STYLE AS CONSULTATION) -->
+    <div id="applyPopup" class="popup-overlay">
       <div class="popup-content">
-        <button class="popup-close" id="closeApplyPopup" aria-label="Close">&times;</button>
+        <button class="popup-close" id="closeApplyPopup">&times;</button>
         <h2>Apply: Internship / Courses</h2>
         <form id="applyForm">
           <label>Full name
-            <input type="text" id="user_name" placeholder="Your full name" required>
+            <input type="text" id="user_name" required>
           </label>
           <label>Email
-            <input type="email" id="user_email" placeholder="you@example.com" required>
+            <input type="email" id="user_email" required>
           </label>
           <label>Short message
-            <textarea id="apply_message" rows="3" placeholder="Tell us briefly why you apply"></textarea>
+            <textarea id="apply_message" rows="3"></textarea>
           </label>
           <label>Interested in
             <select id="apply_role">
@@ -183,9 +154,9 @@
     </div>
 
     <!-- CONSULTATION POPUP -->
-    <div id="consultPopup" class="popup-overlay" aria-hidden="true">
+    <div id="consultPopup" class="popup-overlay">
       <div class="popup-content">
-        <button class="popup-close" id="closeConsultPopup" aria-label="Close">&times;</button>
+        <button class="popup-close" id="closeConsultPopup">&times;</button>
         <h2>Book a Consultation</h2>
         <form id="consultForm">
           <label>Full name
@@ -218,158 +189,143 @@
         <div>
           <h3>Follow</h3>
           <ul class="social">
-            <li><a href="https://instagram.com/veritas_dataservices" target="_blank">Instagram</a></li>
-            <li><a href="https://linkedin.com/company/veritas-data-services" target="_blank">LinkedIn</a></li>
-            <li><a href="https://facebook.com/veritasdataservices" target="_blank">Facebook</a></li>
-            <li><a href="https://github.com/VeritasDataServices" target="_blank">GitHub</a></li>
+            <li><a href="https://instagram.com/veritas_dataservices">Instagram</a></li>
+            <li><a href="https://linkedin.com/company/veritas-data-services">LinkedIn</a></li>
+            <li><a href="https://facebook.com/veritasdataservices">Facebook</a></li>
+            <li><a href="https://github.com/VeritasDataServices">GitHub</a></li>
           </ul>
         </div>
       </div>
-      <p class="copyright">Developed by Veritas Data Services — All Rights Reserved 2025</p>
+      <p class="copyright">Developed by Veritas Data Services — All Rights Reserved © <span id="year"></span></p>
     </footer>
+
   </main>
 
   <!-- SCRIPT -->
   <script>
-    // Safe DOM helpers
-    const $ = id => document.getElementById(id);
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Year (kept static in footer per request — but keep dynamic in code for future)
-    // document.querySelector('.copyright').textContent = "Developed by Veritas Data Services — All Rights Reserved " + new Date().getFullYear();
+  const heroImages = ["veritas_logo_banner.jpg", "veritassecond.jpg"];
+  let currentImage = 0;
+  const heroImg = document.getElementById("heroImage");
+  setInterval(() => {
+    currentImage = (currentImage + 1) % heroImages.length;
+    heroImg.src = heroImages[currentImage];
+  }, 10000);
 
-    // HERO SLIDESHOW (unchanged)
-    const heroImages = ["veritas_logo_banner.jpg", "veritassecond.jpg"];
-    let currentImage = 0;
-    const heroImg = $('heroImage');
-    if (heroImg) {
-      heroImg.src = heroImages[0];
-      setInterval(() => {
-        currentImage = (currentImage + 1) % heroImages.length;
-        heroImg.src = heroImages[currentImage];
-      }, 10000);
+  const popups = {
+    courses: document.getElementById('coursesPopup'),
+    apply: document.getElementById('applyPopup'),
+    consult: document.getElementById('consultPopup')
+  };
+
+  function openPopup(p) { p.style.display = "flex"; }
+  function closePopup(p) { p.style.display = "none"; }
+
+  document.getElementById('openCoursesBtn').onclick =
+  document.getElementById('openCoursesNav').onclick = e => {
+    e.preventDefault(); openPopup(popups.courses);
+  };
+
+  document.getElementById('applyPopupBtn').onclick =
+  document.getElementById('openApplyBtn').onclick = e => {
+    e.preventDefault(); openPopup(popups.apply);
+  };
+
+  document.getElementById('openConsultPopup').onclick = e => {
+    e.preventDefault(); openPopup(popups.consult);
+  };
+
+  document.getElementById('closeCoursesPopup').onclick = () => closePopup(popups.courses);
+  document.getElementById('closeApplyPopup').onclick = () => closePopup(popups.apply);
+  document.getElementById('closeConsultPopup').onclick = () => closePopup(popups.consult);
+
+  Object.values(popups).forEach(p =>
+    p.addEventListener("click", e => { if (e.target === p) closePopup(p); })
+  );
+
+  /* ---------------------------
+     FIXED APPLY FORM HANDLER
+  --------------------------- */
+  document.getElementById('applyForm').onsubmit = e => {
+    e.preventDefault();
+
+    const name = document.getElementById('user_name').value;
+    const email = document.getElementById('user_email').value;
+    const message = document.getElementById('apply_message').value;
+    const role = document.getElementById('apply_role').value;
+
+    window.location.href =
+      `mailto:info@veritasdataservices.com?subject=Application%20for%20${encodeURIComponent(role)}&body=${
+        encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + message)
+      }`;
+  };
+
+  /* -------------------------------
+     FIXED CONSULTATION FORM HANDLER
+  ------------------------------- */
+  document.getElementById('consultForm').onsubmit = e => {
+    e.preventDefault();
+
+    const name = document.getElementById('consult_name').value;
+    const email = document.getElementById('consult_email').value;
+    const msg = document.getElementById('consult_message').value;
+    const contact = document.querySelector('input[name="contact_method"]:checked')?.value;
+
+    if (!contact) return alert("Please choose email or WhatsApp.");
+
+    if (contact === "email") {
+      window.location.href =
+        `mailto:info@veritasdataservices.com?subject=Consultation%20Request&body=${
+          encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + msg)
+        }`;
+    } else {
+      window.open(
+        `https://wa.me/254114815449?text=${encodeURIComponent("Hello, I'm " + name + ". " + msg)}`,
+        "_blank"
+      );
     }
+  };
+</script>
 
-    // Popups
-    const popups = {
-      courses: $('coursesPopup'),
-      apply: $('applyPopup'),
-      consult: $('consultPopup')
-    };
 
-    function openPopup(p) { if (p) p.style.display = "flex"; }
-    function closePopup(p) { if (p) p.style.display = "none"; }
-
-    // menu buttons (defensive checks)
-    const openCoursesBtn = $('openCoursesBtn');
-    const openCoursesNav = $('openCoursesNav');
-    if (openCoursesBtn) openCoursesBtn.addEventListener('click', e => { e.preventDefault(); openPopup(popups.courses); });
-    if (openCoursesNav) openCoursesNav.addEventListener('click', e => { e.preventDefault(); openPopup(popups.courses); });
-
-    const applyPopupBtn = $('applyPopupBtn');
-    const openApplyBtn = $('openApplyBtn');
-    if (applyPopupBtn) applyPopupBtn.addEventListener('click', e => { e.preventDefault(); openPopup(popups.apply); });
-    if (openApplyBtn) openApplyBtn.addEventListener('click', e => { e.preventDefault(); openPopup(popups.apply); });
-
-    const openConsultPopup = $('openConsultPopup');
-    if (openConsultPopup) openConsultPopup.addEventListener('click', e => { e.preventDefault(); openPopup(popups.consult); });
-
-    // close buttons
-    const closeCoursesPopup = $('closeCoursesPopup');
-    const closeApplyPopup = $('closeApplyPopup');
-    const closeConsultPopup = $('closeConsultPopup');
-    if (closeCoursesPopup) closeCoursesPopup.addEventListener('click', () => closePopup(popups.courses));
-    if (closeApplyPopup) closeApplyPopup.addEventListener('click', () => closePopup(popups.apply));
-    if (closeConsultPopup) closeConsultPopup.addEventListener('click', () => closePopup(popups.consult));
-
-    // click outside to close
-    Object.values(popups).forEach(p => {
-      if (p) p.addEventListener('click', e => { if (e.target === p) closePopup(p); });
-    });
-
-    /* ---------------------------
-       APPLY FORM (mailto)
-       --------------------------- */
-    const applyForm = $('applyForm');
-    if (applyForm) {
-      applyForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const name = $('user_name')?.value || '';
-        const email = $('user_email')?.value || '';
-        const message = $('apply_message')?.value || '';
-        const role = $('apply_role')?.value || '';
-        const subject = encodeURIComponent(`Application for ${role}`);
-        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-        window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
-      });
-    }
-
-    /* ---------------------------
-       CONSULT FORM
-       --------------------------- */
-    const consultForm = $('consultForm');
-    if (consultForm) {
-      consultForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const name = $('consult_name')?.value || '';
-        const email = $('consult_email')?.value || '';
-        const msg = $('consult_message')?.value || '';
-        const method = document.querySelector('input[name="contact_method"]:checked')?.value;
-        if (!method) {
-          alert("Please choose Email or WhatsApp.");
-          return;
-        }
-        if (method === 'email') {
-          const subject = encodeURIComponent('Consultation Request');
-          const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
-          window.location.href = `mailto:info@veritasdataservices.com?subject=${subject}&body=${body}`;
-        } else {
-          const whatsappMsg = encodeURIComponent(`Hello, I'm ${name}. ${msg}`);
-          window.open(`https://wa.me/254114815449?text=${whatsappMsg}`, '_blank');
-        }
-      });
-    }
-
-    /* ---------------------------
-       NAV Portfolio dropdown toggles
-       --------------------------- */
-    const portfolioToggle = $('portfolioToggle');
-    const portfolioMenu = $('portfolioMenu');
-    if (portfolioToggle && portfolioMenu) {
-      portfolioToggle.addEventListener('click', e => {
-        e.preventDefault();
-        const open = portfolioMenu.getAttribute('aria-hidden') === 'false';
-        portfolioMenu.style.display = open ? 'none' : 'block';
-        portfolioMenu.setAttribute('aria-hidden', open ? 'true' : 'false');
-      });
-      // close on outside click
-      document.addEventListener('click', (e) => {
-        if (!portfolioToggle.contains(e.target) && !portfolioMenu.contains(e.target)) {
-          portfolioMenu.style.display = 'none';
-          portfolioMenu.setAttribute('aria-hidden', 'true');
-        }
-      });
-    }
-
-    // Hero portfolio dropdown
-    const heroPortfolioBtn = $('heroPortfolioBtn');
-    const heroPortfolioMenu = $('heroPortfolioMenu');
-    if (heroPortfolioBtn && heroPortfolioMenu) {
-      heroPortfolioBtn.addEventListener('click', e => {
-        e.preventDefault();
-        const open = heroPortfolioMenu.getAttribute('aria-hidden') === 'false';
-        heroPortfolioMenu.style.display = open ? 'none' : 'block';
-        heroPortfolioMenu.setAttribute('aria-hidden', open ? 'true' : 'false');
-      });
-      document.addEventListener('click', (e) => {
-        if (!heroPortfolioBtn.contains(e.target) && !heroPortfolioMenu.contains(e.target)) {
-          heroPortfolioMenu.style.display = 'none';
-          heroPortfolioMenu.setAttribute('aria-hidden', 'true');
-        }
-      });
-    }
-  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
