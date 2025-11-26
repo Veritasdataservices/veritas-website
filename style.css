@@ -363,15 +363,38 @@ legend {
   margin: 0 auto;
 }
 
-.social a {
-  color: #e6f2ec;
-  text-decoration: none;
-  margin: 0.15rem 0;
+/* Social section clean styling */
+ul.social {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0;
 }
 
-.social a:hover {
-  color: #fff;
+ul.social li {
+    list-style: none !important;
+    margin-bottom: 0.6rem;
 }
+
+ul.social li::marker {
+    content: ""; !important;
+}
+
+ul.social a {
+    color: #e6f2ec;
+    text-decoration: none;
+    margin: 0.15rem 0;
+    display: inline-block;
+}
+
+ul.social a:hover {
+    color: #ffffff;
+}
+
+ul.social i {
+    margin-right: 0.4rem;
+}
+
+
 
 /* ===========================
       ANIMATIONS
@@ -399,38 +422,10 @@ legend {
   .popup-content { width: 95%; padding: 1.2rem; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    color: #1f332a;
+    margin-top: 0.4rem;
+    opacity: 1;
+    font-weight: 400;
+}

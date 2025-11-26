@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Portfolio — Veritas Data Services</title>
+
+  <meta name="description" content="Explore data analytics, automation, and visualization projects by Veritas Data Services.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"></a>
+      <nav class="nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section class="portfolio-header" style="padding: 3rem 0; text-align:center;">
+    <h1>Our Portfolio</h1>
+    <p class="portfolio-subtitle">
+        A collection of real analytics, automation, machine learning and business intelligence projects.</p>
+  </section>
+
+  <!-- PORTFOLIO GRID -->
+  <section class="container" style="padding: 2rem 0;">
+    <div class="portfolio-grid">
+
+      <!-- Project 1 -->
+      <div class="portfolio-card">
+        <h3>PBJ Nurse Staffing Project</h3>
+        <p>A full data cleaning, analysis, and visualization project for U.S. nursing home staffing data.</p>
+        <a class="btn primary" href="https://github.com/veritasdataservices/PBJ_Nurse_Staffing_Project" target="_blank">View on GitHub</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="portfolio-card">
+        <h3>Jumia E-Commerce Project</h3>
+        <p>Exploratory and predictive analysis of Jumia e-commerce transactions using Python and pandas.</p>
+        <a class="btn primary" href="https://github.com/veritasdataservices/Jumia-E-commerce" target="_blank">View on GitHub</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-card">
+        <h3>Veritas data services Website</h3>
+        <p>Official Veritas data services website — built with modern responsive design and clean UI.</p>
+        <a class="btn primary" href="https://github.com/veritasdataservices/veritas-website" target="_blank">View on GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="site-footer container">
+    <div class="footer-grid">
+
+        <div>
+    <h3>Contact</h3>
+    <p>
+        <i class="fas fa-envelope"></i>
+        Email: 
+        <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a>
+    </p>
+
+    <p>
+        <i class="fas fa-phone-alt"></i>
+        Phone / WhatsApp: 
+        <a href="tel:+254114815449">+254 114 815 449</a>
+    </p>
+</div>
+         <div>
+            <h3>Follow</h3>
+            <ul class="social">
+                <li>
+                    <a href="https://instagram.com/veritas_dataservices" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://linkedin.com/company/veritas-data-services" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://facebook.com/veritasdataservices" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/VeritasDataServices" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        Developed by Veritas Data Services —
+        All Rights Reserved © <span id="year"></span>
+    </p>
+</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success — Veritas Data Services</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0b3b36;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .success-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            max-width: 450px;
+        }
+
+        .success-box i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .success-box h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-box p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .home-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .home-btn:hover {
+            background: #45a049;
+        }
+
+        .redirect-note {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+    </style>
+
+    <script>
+        // Auto redirect to homepage after 5 seconds
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 5000);
+    </script>
+
+</head>
+
+<body>
+
+    <div class="success-box">
+        <i class="fas fa-check-circle"></i>
+        <h1>Submission Successful</h1>
+        <p>Thank you for contacting Veritas Data Services.<br>
+           Our team will respond shortly.</p>
+
+        <a href="index.html" class="home-btn">Return Home</a>
+
+        <p class="redirect-note">You will be redirected automatically in 5 seconds...</p>
+    </div>
+
+</body>
+</html>

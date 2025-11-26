@@ -24,7 +24,14 @@
   <link rel="icon" href="veritas_logo_banner.jpg" type="image/png">
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -51,15 +58,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <!-- Portfolio Dropdown -->
-<div class="dropdown">
-  <button class="dropdown-btn" id="portfolioToggle">Portfolio</button>
-
-  <div class="dropdown-content" id="portfolioMenu">
-    <a href="https://github.com/veritasdataservices/PBJ_Nurse_Staffing_Project" target="_blank">PBJ Nurse Staffing Project</a>
-    <a href="https://github.com/veritasdataServices/Jumia-E-commerce" target="_blank">Jumia-E-Commerce Project</a>
-    <a href="https://github.com/veritasdataservices/veritas-website" target="_blank">Veritas-website</a>
-  </div>
-</div>
+<a href="Portfolio.html">portfolio</a>
   <a href="#" id="openApplyBtn">Apply</a>
         <a href="#" id="openConsultPopup">Consultation</a>
         <a href="#" id="openCoursesNav">Courses</a>
@@ -136,81 +135,149 @@
       </div>
     </div>
 
-    <!-- APPLY POPUP (REBUILT SAME STYLE AS CONSULTATION) -->
-    <div id="applyPopup" class="popup-overlay">
-      <div class="popup-content">
+    <!-- APPLY POPUP -->
+<div id="applyPopup" class="popup-overlay">
+    <div class="popup-content">
         <button class="popup-close" id="closeApplyPopup">&times;</button>
         <h2>Apply: Internship / Courses</h2>
-        <form id="applyForm">
-          <label>Full name
-            <input type="text" id="user_name" required>
-          </label>
-          <label>Email
-            <input type="email" id="user_email" required>
-          </label>
-          <label>Short message
-            <textarea id="apply_message" rows="3"></textarea>
-          </label>
-          <label>Interested in
-            <select id="apply_role">
-              <option>Online Internship</option>
-              <option>Data Analytics Masterclass</option>
-              <option>AI Masterclass</option>
-              <option>Automation Masterclass</option>
-            </select>
-          </label>
-          <button class="consult-btn" type="submit">Send Application</button>
-        </form>
-      </div>
-    </div>
 
-    <!-- CONSULTATION POPUP -->
-    <div id="consultPopup" class="popup-overlay">
-      <div class="popup-content">
+        <form id="applyForm" action="https://formsubmit.co/info@veritasdataservices.com" method="POST">
+
+            <!-- REQUIRED FOR FORMSUBMIT -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <!-- OPTIONAL REDIRECT (leave commented until success.html exists) -->
+            <!-- <input type="hidden" name="_next" value="https://veritasdataservices.com/success.html"> -->
+
+            <label>Full Name</label>
+            <input type="text" name="Full Name" required>
+
+            <label>Email</label>
+            <input type="email" name="Email" required>
+
+            <label>Message</label>
+            <textarea name="Message" rows="3"></textarea>
+
+            <label>Interested In</label>
+            <select name="Interest">
+                <option>Online Internship</option>
+                <option>Data Analytics Masterclass</option>
+                <option>AI Masterclass</option>
+                <option>Automation Masterclass</option>
+            </select>
+
+            <!-- BUTTON MUST BE INSIDE THE FORM -->
+            <button class="consult-btn" type="submit">Send Application</button>
+
+        </form>
+    </div>
+</div>
+
+  <!-- CONSULTATION POPUP -->
+<div id="consultPopup" class="popup-overlay">
+    <div class="popup-content">
         <button class="popup-close" id="closeConsultPopup">&times;</button>
         <h2>Book a Consultation</h2>
-        <form id="consultForm">
-          <label>Full name
-            <input type="text" id="consult_name" required>
-          </label>
-          <label>Email
-            <input type="email" id="consult_email" required>
-          </label>
-          <label>Message
-            <textarea id="consult_message" rows="3"></textarea>
-          </label>
-          <fieldset>
-            <legend>Preferred contact method:</legend>
-            <label><input type="radio" name="contact_method" value="email"> Email</label>
-            <label><input type="radio" name="contact_method" value="whatsapp"> WhatsApp</label>
-          </fieldset>
-          <button type="submit" class="consult-btn">Book Now</button>
+
+        <form id="consultForm"
+              action="https://formsubmit.co/info@veritasdataservices.com"
+              method="POST">
+
+            <!-- REQUIRED BY FORMSUBMIT -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <!-- SUCCESS REDIRECT -->
+            <input type="hidden" name="_next" value="https://veritasdataservices.com/success.html">
+
+            <label>Full Name</label>
+            <input type="text" name="Full Name" required>
+
+            <label>Email</label>
+            <input type="email" name="Email" required>
+
+            <label>Message</label>
+            <textarea name="Message" rows="3"></textarea>
+
+            <fieldset>
+                <legend>Preferred contact method:</legend>
+
+                <label>
+                    <input type="radio" name="Contact Method" value="Email" checked>
+                    Email
+                </label>
+
+                <label>
+                    <input type="radio" name="Contact Method" value="WhatsApp">
+                    WhatsApp
+                </label>
+            </fieldset>
+
+            <button type="submit" class="consult-btn">Book Now</button>
         </form>
-      </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact" class="site-footer container">
+    <div class="footer-grid">
+
+        <!-- Contact Section -->
+        <div>
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                Email: 
+                <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a>
+            </p>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                Phone / WhatsApp: 
+                <a href="tel:+254114815449">+254 114 815 449</a>
+            </p>
+        </div>
+
+        <!-- Social Section -->
+        <div>
+    <h3>Follow</h3>
+    <ul class="social">
+        <li>
+            <a href="#" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </li>
+
+        <li>
+            <a href="#" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </li>
+
+        <li>
+            <a href="#" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </li>
+
+        <li>
+            <a href="https://github.com/veritasdataservices" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </li>
+    </ul>
+</div>
     </div>
 
-    <!-- FOOTER -->
-    <footer id="contact" class="site-footer container">
-      <div class="footer-grid">
-        <div>
-          <h3>Contact</h3>
-          <p>Email: <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></p>
-          <p>Phone / WhatsApp: <a href="tel:+254114815449">+254 114 815 449</a></p>
-        </div>
-        <div>
-          <h3>Follow</h3>
-          <ul class="social">
-            <li><a href="https://instagram.com/veritas_dataservices">Instagram</a></li>
-            <li><a href="https://linkedin.com/company/veritas-data-services">LinkedIn</a></li>
-            <li><a href="https://facebook.com/veritasdataservices">Facebook</a></li>
-            <li><a href="https://github.com/VeritasDataServices">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="copyright">Developed by Veritas Data Services — All Rights Reserved © <span id="year"></span></p>
-    </footer>
+    <p class="copyright">
+        Developed by Veritas Data Services — All Rights Reserved © 
+        <span id="year"></span>
+    </p>
+</footer>
 
-  </main>
+ </main>
 
   <!-- SCRIPT -->
   <script>
@@ -317,7 +384,6 @@ document.addEventListener("click", function () {
 
 </body>
 </html>
-
 
 
 
