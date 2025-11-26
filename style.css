@@ -203,6 +203,45 @@ align-items:center;
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+/* PORTFOLIO DROPDOWN */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  color: #cfe6da;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 0.65rem;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 2000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  color: #1f4730;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background: #e8f3ed;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* ===========================
       POPUPS (SHARED DESIGN)
@@ -356,6 +395,7 @@ legend {
   .nav { text-align: center; }
   .popup-content { width: 95%; padding: 1.2rem; }
 }
+
 
 
 
