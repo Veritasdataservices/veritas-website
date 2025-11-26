@@ -52,7 +52,7 @@
         <a href="#services">Services</a>
         <!-- Portfolio Dropdown -->
 <div class="dropdown">
-  <button class="dropdown-btn" id="portfolioToggle">Portfolio ▾</button>
+  <button class="dropdown-btn" id="portfolioToggle">Portfolio</button>
 
   <div class="dropdown-content" id="portfolioMenu">
     <a href="https://github.com/veritasdataservices/PBJ_Nurse_Staffing_Project" target="_blank">PBJ Nurse Staffing Project</a>
@@ -297,11 +297,27 @@
       );
     }
   };
+  // Portfolio dropdown click toggle
+const portfolioToggle = document.getElementById("portfolioToggle");
+const portfolioMenu = document.getElementById("portfolioMenu");
+
+portfolioToggle.addEventListener("click", function (e) {
+  e.stopPropagation();
+  portfolioMenu.style.display =
+    portfolioMenu.style.display === "block" ? "none" : "block"
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function () {
+  portfolioMenu.style.display = "none";
+});
+
 </script>
 
 
 </body>
 </html>
+
 
 
 
