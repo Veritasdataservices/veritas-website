@@ -429,3 +429,11 @@ ul.social i {
     opacity: 1;
     font-weight: 400;
 }
+/* footer links colors */
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    opacity: 0.8; 
+}

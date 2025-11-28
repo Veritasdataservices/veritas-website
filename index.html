@@ -136,88 +136,84 @@
     </div>
 
     <!-- APPLY POPUP -->
-<div id="applyPopup" class="popup-overlay">
-    <div class="popup-content">
-        <button class="popup-close" id="closeApplyPopup">&times;</button>
-        <h2>Apply: Internship / Courses</h2>
+<div id="applyPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <button class="popup-close" id="closeApplyPopup">&times;</button>
+    <h2>Apply: Internship / Courses</h2>
 
-        <form id="applyForm" action="https://formsubmit.co/info@veritasdataservices.com" method="POST">
+    <form id="applyForm" 
+      action="https://formsubmit.co/info@veritasdataservices.com" 
+      method="POST">
 
-            <!-- REQUIRED FOR FORMSUBMIT -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
+    <!-- REQUIRED -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://veritasdataservices.com/success.html">
 
-            <!-- OPTIONAL REDIRECT (leave commented until success.html exists) -->
-            <!-- <input type="hidden" name="_next" value="https://veritasdataservices.com/success.html"> -->
+    <label for="apply_name">Full Name</label>
+    <input id="apply_name" type="text" name="Full Name" required>
 
-            <label>Full Name</label>
-            <input type="text" name="Full Name" required>
+    <label for="apply_email">Email</label>
+    <input id="apply_email" type="email" name="Email" required>
 
-            <label>Email</label>
-            <input type="email" name="Email" required>
+    <label for="apply_msg">Message</label>
+    <textarea id="apply_msg" name="Message" rows="3"></textarea>
 
-            <label>Message</label>
-            <textarea name="Message" rows="3"></textarea>
+    <label for="apply_interest">Interested In</label>
+    <select id="apply_interest" name="Interest">
+        <option>Online Internship</option>
+        <option>Data Analytics Masterclass</option>
+        <option>AI Masterclass</option>
+        <option>Automation Masterclass</option>
+    </select>
 
-            <label>Interested In</label>
-            <select name="Interest">
-                <option>Online Internship</option>
-                <option>Data Analytics Masterclass</option>
-                <option>AI Masterclass</option>
-                <option>Automation Masterclass</option>
-            </select>
-
-            <!-- BUTTON MUST BE INSIDE THE FORM -->
-            <button class="consult-btn" type="submit">Send Application</button>
-
-        </form>
-    </div>
+    <button class="consult-btn" type="submit">Send Application</button>
+</form>
+ 
 </div>
+   </div>
 
-  <!-- CONSULTATION POPUP -->
+ <!-- CONSULTATION POPUP -->
 <div id="consultPopup" class="popup-overlay">
     <div class="popup-content">
         <button class="popup-close" id="closeConsultPopup">&times;</button>
         <h2>Book a Consultation</h2>
+        <form id="consultForm" 
+      action="https://formsubmit.co/info@veritasdataservices.com" 
+      method="POST">
 
-        <form id="consultForm"
-              action="https://formsubmit.co/info@veritasdataservices.com"
-              method="POST">
+    <!-- REQUIRED -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://veritasdataservices.com/success.html">
 
-            <!-- REQUIRED BY FORMSUBMIT -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
+    <label for="consult_name">Full Name</label>
+    <input id="consult_name" type="text" name="Full Name" required>
 
-            <!-- SUCCESS REDIRECT -->
-            <input type="hidden" name="_next" value="https://veritasdataservices.com/success.html">
+    <label for="consult_email">Email</label>
+    <input id="consult_email" type="email" name="Email" required>
 
-            <label>Full Name</label>
-            <input type="text" name="Full Name" required>
+    <label for="consult_msg">Message</label>
+    <textarea id="consult_msg" name="Message" rows="3"></textarea>
 
-            <label>Email</label>
-            <input type="email" name="Email" required>
+    <fieldset>
+        <legend>Preferred contact method:</legend>
 
-            <label>Message</label>
-            <textarea name="Message" rows="3"></textarea>
+        <label>
+            <input type="radio" name="Contact Method" value="Email" checked>
+            Email
+        </label>
 
-            <fieldset>
-                <legend>Preferred contact method:</legend>
+        <label>
+            <input type="radio" name="Contact Method" value="WhatsApp">
+            WhatsApp
+        </label>
+    </fieldset>
 
-                <label>
-                    <input type="radio" name="Contact Method" value="Email" checked>
-                    Email
-                </label>
-
-                <label>
-                    <input type="radio" name="Contact Method" value="WhatsApp">
-                    WhatsApp
-                </label>
-            </fieldset>
-
-            <button type="submit" class="consult-btn">Book Now</button>
-        </form>
-    </div>
+    <button class="consult-btn" type="submit">Book Now</button>
+</form>
 </div>
+  </div>
 
 <!-- FOOTER -->
 <footer id="contact" class="site-footer container">
@@ -322,48 +318,6 @@
     p.addEventListener("click", e => { if (e.target === p) closePopup(p); })
   );
 
-  /* ---------------------------
-     FIXED APPLY FORM HANDLER
-  --------------------------- */
-  document.getElementById('applyForm').onsubmit = e => {
-    e.preventDefault();
-
-    const name = document.getElementById('user_name').value;
-    const email = document.getElementById('user_email').value;
-    const message = document.getElementById('apply_message').value;
-    const role = document.getElementById('apply_role').value;
-
-    window.location.href =
-      `mailto:info@veritasdataservices.com?subject=Application%20for%20${encodeURIComponent(role)}&body=${
-        encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + message)
-      }`;
-  };
-
-  /* -------------------------------
-     FIXED CONSULTATION FORM HANDLER
-  ------------------------------- */
-  document.getElementById('consultForm').onsubmit = e => {
-    e.preventDefault();
-
-    const name = document.getElementById('consult_name').value;
-    const email = document.getElementById('consult_email').value;
-    const msg = document.getElementById('consult_message').value;
-    const contact = document.querySelector('input[name="contact_method"]:checked')?.value;
-
-    if (!contact) return alert("Please choose email or WhatsApp.");
-
-    if (contact === "email") {
-      window.location.href =
-        `mailto:info@veritasdataservices.com?subject=Consultation%20Request&body=${
-          encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + msg)
-        }`;
-    } else {
-      window.open(
-        `https://wa.me/254114815449?text=${encodeURIComponent("Hello, I'm " + name + ". " + msg)}`,
-        "_blank"
-      );
-    }
-  };
   // Portfolio dropdown click toggle
 const portfolioToggle = document.getElementById("portfolioToggle");
 const portfolioMenu = document.getElementById("portfolioMenu");
