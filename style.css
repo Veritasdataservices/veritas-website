@@ -437,3 +437,29 @@ ul.social i {
 .site-footer a:hover {
     opacity: 0.8; 
 }
+.domain-section {
+    margin: 2rem 0 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background: #f3fff4; /* soft green tint */
+    
+  }
+
+.domain-section h3 {
+    margin-bottom: 0.5rem;
+    color: #1f4730; /* Dark Veritas green */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.domain-list li {
+    padding: 6px 0;
+    font-size: 1rem;
+    color: #1f4730;; /* Dark Veritas green */
+    font-weight: 500;
+}
+.domain-list {
+    list-style-type: none;   /* removes the dots */
+    padding-left: 0;         /* removes the indent */
+    margin-left: 0;
+    text-align: center;      /* optional, keeps it neat */
+}
