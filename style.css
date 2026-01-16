@@ -463,3 +463,26 @@ ul.social i {
     margin-left: 0;
     text-align: center;      /* optional, keeps it neat */
 }
+/* Principles list — Veritas style */
+.principles {
+  list-style: none;        /* removes dots */
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.principles li {
+  padding: 6px 0;
+  font-size: 1rem;
+  color: #1f4730;          /* Veritas dark green */
+  font-weight: 500;
+}
+
+/* Optional: make the tick part of styling (cleaner) */
+.principles li::before {
+  content: "●";
+  color: #1f4730;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+
