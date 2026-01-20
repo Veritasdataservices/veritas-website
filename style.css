@@ -130,9 +130,9 @@ align-items:center;
 }
 
 .btn.ghost {
-  background: transparent;
-  color: #1f4730;
-  border: 1px solid #1f4730;
+  background: #1f4730;
+  color: #fff;
+  border-color:#1f4730;
 }
 
 .btn:hover {
@@ -501,6 +501,62 @@ blockquote .quote-author {
   font-style: normal;
   color: #2e7d5b;
 }
+
+.portfolio-image-square {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 16px rgba(15,107,79,0.25);
+
+  display: block;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  cursor: zoom-in
+}
+
+.portfolio-card .btn {
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 6px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
 
 
 

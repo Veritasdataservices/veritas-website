@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-
 <body>
   <!-- HEADER -->
   <header class="site-header">
@@ -39,14 +38,23 @@
 
       <!-- Project 1 -->
       <div class="portfolio-card">
-        <h3>PBJ_Daily_Nurse_Staffing_Q2_2024</h3>
+        <h3>(1).PBJ_Daily_Nurse_Staffing_Q2_2024</h3>
         <p>Regulatory Compliance Audit: Federal Nurse Staffing (CMS PBJ). Engineered an auditable Python framework to validate 1.3M+ federal records from 14,564 U.S nursing homes</p>
+        
         <p>facility-level, non-compliance with federal staffing mandates and exposed reporting inconsistencies to mitigate regulatory risk.</p>
-        <a class="btn primary" href="https://github.com/veritasdataservices/PBJ_Daily_Nurse_Staffing_Q2_2024" target="_blank">View on GitHub</a>
+
+        <p><strong>(click to zoom dashboard)</strong></p>
+        
+        <img src="PBJ-Q2-24-DASH1.png"
+         alt="CMS PBJ Nurse Staffing Q2 2024 Primary Executive Dashboard"
+         class="portfolio-image-square"
+         onclick="openModal(this.src)">
+
+     <a class="btn primary" href="https://github.com/veritasdataservices/PBJ_Daily_Nurse_Staffing_Q2_2024" target="_blank">View on GitHub</a>
     
       </div> <!-- Project 2 -->
       <div class="portfolio-card">
-        <h3>PBJ_Daily_Nurse_Staffing_Q1_2025</h3>
+        <h3>(2).PBJ_Daily_Nurse_Staffing_Q1_2025</h3>
         <p>Developed a traceable data pipeline to assess staffing adequacy across Facilities in the U.S, 1.3M+ federal Nurse Daily staffing quater 1 for the year 2025.</p>
         <p> Transformed complex workforce datasets into defensible, executive-ready python charts and Tableau dashboards to support high-stakes operational interventions..</p>
         <a class="btn primary" href="https://github.com/veritasdataservices/PBJ_Nurse_Staffing_Project" target="_blank">View on GitHub</a>
@@ -106,13 +114,32 @@
 
     <p class="copyright">
     Developed by Veritas Data Services - Operated by<em> Aletheia Veritas Analytics Services,</em></p>
-    <p>registered in Kenya. All Rights Reserved © <span id="year"></span>
+    <p>registered in Kenya. All Rights Reserved © 2025 - <span id="year"></span>
     </p>
 </footer>
+
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+
+<script>
+function openModal(src) {
+  document.getElementById("imageModal").style.display = "block";
+  document.getElementById("modalImage").src = src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
 
 </body>
 </html>
