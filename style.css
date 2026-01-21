@@ -715,11 +715,12 @@ RESPONSIVE
 
 .hero {
 
-padding: 2rem 1rem 3rem;
+padding: 3rem 1rem 3.5rem;
 
 }
 
 .hero-inner {
+  gap: 2.2rem;  /* spaces between image and text */
 
 flex-direction: column;
 
@@ -731,7 +732,8 @@ gap: 1.5rem;
 
 .hero-media {
 
-flex: none;              /* 🔑 kills the 420px lock */
+flex: none; 
+margin-top: 0.5rem;             /* 🔑 kills the 420px lock */
 
 width: 100%;
 
@@ -758,6 +760,7 @@ display: block;
 .hero-text {
 
 padding: 0;
+margin-top: 0.5rem;
 
 }
 
@@ -773,7 +776,7 @@ line-height: 1.25;
 
 font-size: 1rem;
 
-margin-bottom: 1rem;
+margin-bottom: 1.4rem;
 
 }
 
