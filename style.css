@@ -414,12 +414,59 @@ ul.social i {
       RESPONSIVE
    =========================== */
 
-@media (max-width: 900px) {
-  .hero-inner { flex-direction: column; text-align: center; }
-  .hero-media { max-width: 320px; }
-  .header-inner { flex-direction: column; gap: 0.6rem; }
-  .nav { text-align: center; }
-  .popup-content { width: 95%; padding: 1.2rem; }
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-media {
+    flex: none;              /* 🔑 kills the 420px lock */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-media img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hero-text {
+    padding: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .hero-text p.lead {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 .portfolio-subtitle {
@@ -553,6 +600,8 @@ blockquote .quote-author {
   font-weight: bold;
   cursor: pointer;
 }
+
+
 
 
 
