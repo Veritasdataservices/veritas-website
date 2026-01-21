@@ -467,7 +467,22 @@ ul.social i {
     width: 100%;
     max-width: 320px;
   }
+
+@media (max-width: 768px) {
+
+  .hero-inner {
+    padding: 0 0.5rem;   /* 🔑 adds breathing room */
+  }
+
+  .hero-media {
+    margin-top: 0.5rem; /* 🔑 separates image from header */
+  
+   }
+ 
+ }
+
 }
+
 
 .portfolio-subtitle {
     font-size: 1.2rem;
