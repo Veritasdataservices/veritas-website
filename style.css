@@ -1038,28 +1038,6 @@ cursor: pointer;
 
 }
 
-/* ===========================
-   HERO CTA — MOBILE ONLY FIX
-   (buttons arrangement only)
-   =========================== */
-
-@media (max-width: 768px) {
-
-  .hero-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;              /* clean spacing between buttons */
-    align-items: center;   /* center them */
-    margin-top: 1rem;
-  }
-
-  .hero-cta .btn {
-    width: 100%;
-    max-width: 320px;      /* consistent button width */
-    text-align: center;
-  }
-
-}
 
 
 
