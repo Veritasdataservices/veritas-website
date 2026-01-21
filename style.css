@@ -464,8 +464,10 @@ ul.social i {
   }
 
   .hero-cta .btn {
-    width: 100%;
-    max-width: 320px;
+    width: 90%;
+    max-width: 340px;
+    border-radius: 14px; /* premium feel */
+    padding: 0.85rem 1.4rem;
   }
 
 @media (max-width: 768px) {
