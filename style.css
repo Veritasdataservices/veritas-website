@@ -153,12 +153,18 @@ text-decoration: underline;
   justify-content: space-between;
 }
 
-/* Keep nav centered visually */
+/* Nav should be left-aligned (fix mobile overflow) */
 .nav {
   display: flex;
+  align-items: center;
   gap: 1.3rem;
-  margin: 0 auto;
+
+  justify-content: flex-start; /* ← key change */
+  margin-left: 16px;           /* space from logo */
+  margin-right: 0;
+  flex: 1;                     /* allow it to use available width */
 }
+
 
 /* Right-edge icon container */
 .header-controls {
