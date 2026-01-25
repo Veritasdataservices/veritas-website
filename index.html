@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Veritas Data Services | A Standard for Data Integrity & Compliance. We architect auditable, regulatory-aligned data systems for organizations that prioritize rigor over noise. Through our Consultancy, we solve high-stakes compliance and operational challenges.
+  <title>Veritas Data Services: A Standard for Data Integrity & Compliance. We architect auditable, regulatory-aligned data systems for organizations that prioritize rigor over noise. Through our Consultancy, we solve high-stakes compliance and operational challenges.
     Through our Academy, we certify the next generation of Data Architects in the Veritas Protocol.</title>
 
   <meta name="description" content="We architect auditable, regulatory-aligned data systems for organizations that prioritize rigor over noise. 
@@ -414,7 +414,18 @@ document.getElementById('openCoursesNav').onclick = e => {
     menu.style.display = (menu.style.display === "block") ? "none" : "block";
   });
 
+  const menuToggle = document.getElementById("menuToggle");
+  const navHidden  = document.getElementById("navHidden");
 
+  // 🔹 Close menu when clicking outside it
+  document.addEventListener("click", function (e) {
+    const clickedInsideMenu =
+      navHidden.contains(e.target) || menuToggle.contains(e.target);
+
+    if (!clickedInsideMenu) {
+      navHidden.style.display = "none";
+    }
+  });
 
 </script>
 
