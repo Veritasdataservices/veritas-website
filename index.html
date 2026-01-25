@@ -51,23 +51,39 @@
 <body>
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home"></a>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <!-- Portfolio Dropdown -->
-<a href="Portfolio.html">Portfolio</a>
-  <a href="#" id="openApplyBtn">Veritas Academy</a>
-        <a href="#" id="openConsultPopup">Consultation</a>
-        <a href="#" id="openCoursesNav">Explore Courses</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container header-inner">
 
-  <!-- HERO -->
+    <!-- Brand -->
+    <a class="brand" href="#home"></a>
+
+    <!-- Primary visible nav -->
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="Portfolio.html">Portfolio</a>
+    </nav>
+
+    <!-- Header right controls -->
+<div class="header-controls">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+ <!-- Hidden functional links -->
+    <div class="nav-hidden" id="navHidden">
+  <a href="#" id="openConsultPopup">Consultation</a>
+  <a href="#" id="openCoursesNav">Explore Courses</a>
+  <a href="#" id="openApplyBtn">Veritas Academy</a>
+  <a href="careers.html">Careers</a>
+</div>
+  </div>
+</header>
+
+ <!-- HERO -->
   <main>
     <section id="home" class="hero">
       <div class="container hero-inner">
@@ -365,10 +381,14 @@ document.getElementById('openCoursesNav').onclick = e => {
   document.getElementById('closeConsultPopup').onclick = () => closePopup(popups.consult);
 
   Object.values(popups).forEach(p =>
-    p.addEventListener("click", e => {
-      if (e.target === p) closePopup(p);
-    })
-  );
+  p.addEventListener("click", e => {
+    // Only close when clicking the dark overlay itself
+    if (e.target === p && e.target.classList.contains("popup-overlay")) {
+      closePopup(p);
+    }
+  })
+);
+
 
   // Portfolio dropdown
   const portfolioToggle = document.getElementById("portfolioToggle");
@@ -380,11 +400,21 @@ document.getElementById('openCoursesNav').onclick = e => {
       portfolioMenu.style.display === "block" ? "none" : "block";
   });
 
-  document.addEventListener("click", function () {
+  document.addEventListener("click", function (e) {
+  if (!portfolioMenu.contains(e.target) && e.target !== portfolioToggle) {
     portfolioMenu.style.display = "none";
-  });
+  }
+});
+
 
 });
+
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    const menu = document.getElementById("navHidden");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  });
+
+
 
 </script>
 

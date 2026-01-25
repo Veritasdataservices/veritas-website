@@ -1,24 +1,14 @@
-This was the full css code...the previous without changes....
-
-You were only to change the hero nothing else.
-
-
-Kindly paste it back to me.
-
-
-
-thats the whole css
 /* ==============
 
 VERITAS DATA SERVICES - MAIN STYLE
 
 ============== */
 
-{
+*{
 
-margin: 0;
+margin : 0;
 
-padding: 0;
+padding : 0;
 
 box-sizing: border-box;
 
@@ -104,6 +94,96 @@ color: #fff;
 text-decoration: underline;
 
 }
+
+/* === MENU TOGGLE ICON (≡) === */
+.menu-toggle {
+  background: transparent;
+  border: none;
+  font-size: 32px;       /* deliberate size */
+  font-weight: 600;
+  color: #ffffff;       /* WHITE — does not touch header green */
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 10px;
+}
+/* === HIDDEN NAV DRAWER === */
+
+.nav-hidden {
+  display: none;                 
+  position: absolute;
+
+  top: 70px;                     
+  right: 16px;                  /* ✅ same side as hamburger */
+
+  width: 240px;
+
+  background: #1f4730;
+;           /* ✅ EXACT header green */
+  border-radius: 10px;
+  padding: 12px 0;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+
+  z-index: 2000;
+}
+
+
+.nav-hidden a {
+  display: block;
+
+  padding: 12px 20px;
+
+  color: #ffffff;               /* ✅ white */
+  text-decoration: none;
+  font-weight: 600;             /* ✅ bold like header */
+  font-size: 15px;              /* match nav scale */
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-hidden a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Header layout fix: allow right-edge control */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Keep nav centered visually */
+.nav {
+  display: flex;
+  gap: 1.3rem;
+  margin: 0 auto;
+}
+
+/* Right-edge icon container */
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger button styling */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* The three white dashes */
+.menu-toggle span {
+  display: block;
+  width: 34px;          /* size control */
+  height: 4px;          /* thickness */
+  margin: 6px 0;
+  background-color: #ffffff; /* white as requested */
+  border-radius: 3px;
+}
+
 
 /* ===========================
 
@@ -655,7 +735,7 @@ margin-bottom: 0.6rem;
 
 ul.social li::marker {
 
-content: ""; !important;
+content: ""; /*!important*/
 
 }
 
