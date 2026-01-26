@@ -1,70 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Selected Case Studies-Veritas Data Services</title>
-
-  <meta name="description" content="Explore data analytics, automation, and visualization projects by Veritas Data Services.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers | Veritas Data Services</title>
+  <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 <body>
-  <!-- HEADER -->
+
+  <!-- HEADER (same structure as other pages) -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"></a>
+
       <nav class="nav">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#about">About</a>
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
       </nav>
+
     </div>
   </header>
 
-  <!-- PAGE TITLE -->
-  <div class="portfolio-wrap">
-  <section class="portfolio-header" style="padding: 3rem 0; text-align:center;">
-    <h1>Selected Case Studies</h1>
-    <div class="brand-separator"></div>
-    <p class="portfolio-subtitle">
-        Evidence in Action: A selected case studies of Regulatory Audits and Decision-Safe Architecture</p>
-  </section>
+  <!-- CAREERS CONTENT -->
+  <main>
+    <section class="container" style="padding: 3rem 0; max-width: 800px;">
 
-  <!-- PORTFOLIO GRID -->
-  <section class="container" style="padding: 2rem 0;">
-    <div class="portfolio-grid">
+      <div class="page-header-center">
+      
+        <h1>Careers at Veritas Data Services</h1>
+      <div class="brand-separator"></div>
 
-      <!-- Project 1 -->
-      <div class="portfolio-card">
-        <h3>(1).PBJ_Daily_Nurse_Staffing_Q2_2024</h3>
-        <p>Regulatory Compliance Audit: Federal Nurse Staffing (CMS PBJ). Engineered an auditable Python framework to validate 1.3M+ federal records from 14,564 U.S nursing homes</p>
-        
-        <p>facility-level, non-compliance with federal staffing mandates and exposed reporting inconsistencies to mitigate regulatory risk.</p>
-        
-        <p><strong>(click to zoom dashboard)</strong></p>
-        
-        <img src="PBJ-Q2-24-DASH1.png"
-         alt="CMS PBJ Nurse Staffing Q2 2024 Primary Executive Dashboard"
-         class="portfolio-image-square"
-         onclick="openModal(this.src)">
+      <p> Veritas Data Services is a growing data & compliance consultancy focused on
+        audit-grade analytics and regulatory-aligned data architecture.
+      </p>
+      <p>At this time, we do not have any open vacancies.
+        We encourage interested candidates to check back periodically as opportunities
+        become available.
+      </p>
+       <p>We value rigor, clarity, and ethical data practice. When roles open, they will be listed here.
+      </p>
 
-     <a class="btn primary" href="https://github.com/veritasdataservices/PBJ_Daily_Nurse_Staffing_Q2_2024"
-      target="_blank">View on GitHub</a>
-    
-    
-      </div> <!-- Project 2 -->
-      <div class="portfolio-card">
-        <h3>(2).PBJ_Daily_Nurse_Staffing_Q1_2025</h3>
-        <p>Developed a traceable data pipeline to assess staffing adequacy across Facilities in the U.S, 1.3M+ federal Nurse Daily staffing quater 1 for the year 2025.</p>
-        <p> Transformed complex workforce datasets into defensible, executive-ready python charts and Tableau dashboards to support high-stakes operational interventions..</p>
-        <a class="btn primary" href="https://github.com/veritasdataservices/PBJ_Nurse_Staffing_Project" target="_blank">View on GitHub</a>
-      </div>
-    </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer id="contact" class="site-footer container">
@@ -142,7 +122,6 @@ function closeModal() {
   document.getElementById("imageModal").style.display = "none";
 }
 </script>
-
 
 </body>
 </html>

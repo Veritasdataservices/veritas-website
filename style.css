@@ -467,6 +467,18 @@ font-size: 1rem;
 
 }
 
+/* On-brand section separator */
+.brand-separator {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #1f4730, #1f4730 );
+  margin: 0.75rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+
+
+
 .dropdown-btn:hover {
 
 color: #fff;
@@ -531,6 +543,17 @@ background: #e8f3ed;
 .portfolio-wrap h3 {
   margin-bottom: 14px;
 }
+
+/* Spacing between portfolio items (no divider) */
+.portfolio-card {
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06)
+}
+
+.brand-separator.faint{
+  opacity: 0.15;
+}
+
 
 @media (max-width: 768px) {
   .portfolio-wrap {
@@ -1149,6 +1172,12 @@ pointer-events: auto;
   cursor: pointer;
   z-index: 10001;
 }
+
+.page-header-center{
+  text-align: center;
+}
+
+
 
 
 
