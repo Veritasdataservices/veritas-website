@@ -1177,6 +1177,21 @@ pointer-events: auto;
   text-align: center;
 }
 
+.page-header-center {
+  text-align: center;
+}
+
+.page-header-center h1 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: 1.25;
+}
+
+.page-header-center p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+
 
 
 
