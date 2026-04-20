@@ -125,6 +125,18 @@
       letter-spacing: 0.3px;
     }
 
+    .copyright {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  line-height: 1.7;
+}
+
     .dashboard-row {
       display: flex;
       gap: 1rem;
@@ -189,6 +201,12 @@
       .portfolio-card { padding: 1.4rem 1.2rem; }
       .portfolio-image-square { width: 150px; height: 115px; }
     }
+
+    @media (max-width: 600px) {
+  .portfolio-page-header { padding: 1.8rem 1rem; }
+  .footer-grid { flex-direction: column; gap: 1rem; }
+  .site-footer { padding: 1.5rem 1rem; }
+}
   </style>
 </head>
 
@@ -284,8 +302,10 @@
           </ul>
         </div>
       </div>
-      <p class="copyright" style="text-align: center; width: 100%;">Developed by Veritas Data Services,Operated by <em>Aletheia Veritas Analytics Services</em></p>
-      <p class="copyright" style="text-align: center; width: 100%;">registered in Kenya. All Rights Reserved &copy; 2025 - <span id="year"></span></p>
+      <p class="copyright">
+  Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>
+  Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.
+</p>
     </div>
   </footer>
 
