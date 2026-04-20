@@ -5,123 +5,309 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Careers | Veritas Data Services</title>
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <style>
+    .careers-page-header {
+      background: #1f4730;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
 
+    .careers-page-header h1 {
+      color: #ffffff;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .careers-page-header .brand-separator {
+      background: #c8a96e;
+      margin: 0.8rem auto 1rem;
+    }
+
+    .careers-page-header p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .careers-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .careers-status-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      border: 1px solid rgba(31,71,48,0.1);
+      box-shadow: 0 4px 20px rgba(31,71,48,0.07);
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .careers-status-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #1f4730;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #e8f3ed;
+      border: 1px solid rgba(31,71,48,0.15);
+      color: #1f4730;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .status-badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #1f4730;
+      border-radius: 50%;
+    }
+
+    .careers-status-card h3 {
+      color: #1f4730;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .careers-status-card p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
+    }
+
+    .careers-values-card {
+      background: #1f4730;
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 4px 20px rgba(31,71,48,0.12);
+      margin-bottom: 1.5rem;
+    }
+
+    .careers-values-card h3 {
+      color: #c8a96e;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .value-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .value-icon i {
+      color: #c8a96e;
+      font-size: 0.85rem;
+    }
+
+    .value-text {
+      flex: 1;
+    }
+
+    .value-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .value-desc {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .careers-contact-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.8rem 2.2rem;
+      border: 1px solid rgba(31,71,48,0.1);
+      box-shadow: 0 4px 20px rgba(31,71,48,0.07);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .careers-contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #c8a96e;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .careers-contact-card p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+
+    .careers-contact-card a {
+      color: #1f4730;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .careers-contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .careers-status-card,
+      .careers-values-card,
+      .careers-contact-card {
+        padding: 1.4rem 1.2rem;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- HEADER (same structure as other pages) -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="Portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
+        <a href="index.html#about">About</a>
       </nav>
-
     </div>
   </header>
 
-  <!-- CAREERS CONTENT -->
+  <!-- PAGE HEADER -->
+  <div class="careers-page-header">
+    <h1>Careers at Veritas Data Services</h1>
+    <div class="brand-separator"></div>
+    <p>Join a firm that holds data to the highest standard</p>
+  </div>
+
+  <!-- CONTENT -->
   <main>
-    <section class="container" style="padding: 2rem 1.2rem; max-width: 720px; margin: 0 auto;">
+    <div class="careers-wrap">
 
-   <div class="page-header-center">
-      
-        <h1>Careers at Veritas Data Services</h1>
-      <div class="brand-separator"></div>
+      <!-- Status Card -->
+      <div class="careers-status-card">
+        <div class="status-badge">No Open Vacancies</div>
+        <h3>We are not currently hiring</h3>
+        <p>Veritas Data Services is a growing data and compliance consultancy focused on audit-grade analytics and regulatory-aligned data architecture.</p>
+        <p>At this time we do not have any open vacancies. We encourage interested candidates to check back periodically as opportunities become available.</p>
+      </div>
 
-      <p> Veritas Data Services is a growing data & compliance consultancy focused on
-        audit-grade analytics and regulatory-aligned data architecture.
-      </p>
-      <p>At this time, we do not have any open vacancies.
-        We encourage interested candidates to check back periodically as opportunities
-        become available.
-      </p>
-       <p>We value rigor, clarity, and ethical data practice. When roles open, they will be listed here.
-      </p>
+      <!-- Values Card -->
+      <div class="careers-values-card">
+        <h3>What We Look For</h3>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="value-text">
+              <div class="value-title">Rigor</div>
+              <div class="value-desc">We build analytics that withstand scrutiny</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <div class="value-text">
+              <div class="value-title">Clarity</div>
+              <div class="value-desc">Findings must be traceable and reproducible</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-scale-balanced"></i></div>
+            <div class="value-text">
+              <div class="value-title">Ethics</div>
+              <div class="value-desc">Ethical data practice is non-negotiable</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </section>
+      <!-- Contact Card -->
+      <div class="careers-contact-card">
+        <p>If you believe your skills align with our work and want to make a speculative introduction, feel free to reach out.</p>
+        <p><a href="mailto:info@veritasdataservices.com"><i class="fas fa-envelope" style="margin-right:6px;"></i>info@veritasdataservices.com</a></p>
+      </div>
+
+    </div>
   </main>
 
   <!-- FOOTER -->
-  <footer id="contact" class="site-footer container">
-    <div class="footer-grid">
-
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
         <div>
-    <h3>Contact Us</h3>
-    <p>
-        <i class="fas fa-envelope"></i>
-        Email: 
-        <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a>
-    </p>
-
-    <p>
-        <i class="fas fa-phone"></i>
-        Phone / WhatsApp: 
-        <a href="tel:+254114815449">+254 114 815 449</a>
-    </p>
-</div>
-         <div>
-            <h3>Follow Us</h3>
-            <ul class="social">
-                <li>
-                    <a href="https://instagram.com/veritas_dataservices" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://linkedin.com/company/veritas-data-services" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://facebook.com/veritasdataservices" target="_blank">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://github.com/VeritasDataServices" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </li>
-            </ul>
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></p>
+          <p><i class="fas fa-phone"></i> Phone / WhatsApp: <a href="tel:+254114815449">+254 114 815 449</a></p>
         </div>
-
+        <div>
+          <h3>Follow Us</h3>
+          <ul class="social">
+            <li><a href="https://www.instagram.com/veritas_dataservices" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/veritas-data-services" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/veritasdataservices" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://github.com/veritasdataservices" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright" style="text-align: center; width: 100%;">Developed by Veritas Data Services,Operated by <em>Aletheia Veritas Analytics Services</em></p>
+      <p class="copyright" style="text-align: center; width: 100%;">registered in Kenya. All Rights Reserved &copy; 2025 - <span id="year"></span></p>
     </div>
-
-    <p class="copyright">
-    Developed by Veritas Data Services - Operated by<em> Aletheia Veritas Analytics Services,</em></p>
-    <p>registered in Kenya. All Rights Reserved © 2025 - <span id="year"></span>
-    </p>
-</footer>
-
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
-
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-
-<script>
-function openModal(src) {
-  document.getElementById("imageModal").style.display = "block";
-  document.getElementById("modalImage").src = src;
-}
-
-function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
-}
-</script>
 
 </body>
 </html>
