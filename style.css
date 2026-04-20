@@ -935,6 +935,17 @@ max-width: 320px;
 
 }
 
+.footer-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footer-grid > div {
+    flex: 1;
+  }
+
 }
 
 .portfolio-subtitle {
