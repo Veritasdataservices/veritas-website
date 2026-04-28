@@ -1219,6 +1219,19 @@ pointer-events: auto;
   line-height: 1.65;
 }
 
+@media (max-width: 768px) {
+  .cards {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    text-align: center;
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
 
 
 
