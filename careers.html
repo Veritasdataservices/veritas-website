@@ -143,9 +143,7 @@
       font-size: 0.85rem;
     }
 
-    .value-text {
-      flex: 1;
-    }
+    .value-text { flex: 1; }
 
     .value-title {
       font-size: 0.9rem;
@@ -182,18 +180,6 @@
       border-radius: 4px 0 0 4px;
     }
 
-    .copyright {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 0.98rem;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.5px;
-  text-align: center;
-  margin-top: 1.5rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  line-height: 1.7;
-}
-
     .careers-contact-card p {
       font-size: 0.95rem;
       color: #4a5568;
@@ -207,32 +193,35 @@
       text-decoration: none;
     }
 
-    .careers-contact-card a:hover {
-      text-decoration: underline;
+    .careers-contact-card a:hover { text-decoration: underline; }
+
+    .copyright {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      line-height: 1.7;
     }
 
     @media (max-width: 600px) {
       .careers-status-card,
       .careers-values-card,
-      .careers-contact-card {
-        padding: 1.4rem 1.2rem;
-      }
-      .values-grid {
-        grid-template-columns: 1fr;
-      }
-
-      @media (max-width: 600px) {
-  .careers-page-header { padding: 1.8rem 1rem; }
-  .footer-grid { flex-direction: column; gap: 1rem; }
-  .site-footer { padding: 1.5rem 1rem; }
-}
+      .careers-contact-card { padding: 1.4rem 1.2rem; }
+      .values-grid { grid-template-columns: 1fr; }
+      .careers-page-header { padding: 1.8rem 1rem; }
+      .footer-grid { flex-direction: column; gap: 1rem; }
+      .site-footer { padding: 1.5rem 1rem; }
+      .nav { display: none; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <nav class="nav">
@@ -243,26 +232,22 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
   <div class="careers-page-header">
     <h1>Careers at Veritas Data Services</h1>
     <div class="brand-separator"></div>
-    <p>Join a firm that holds data to the highest standard</p>
+    <p>Join a firm that builds digital solutions to the highest standard</p>
   </div>
 
-  <!-- CONTENT -->
   <main>
     <div class="careers-wrap">
 
-      <!-- Status Card -->
       <div class="careers-status-card">
         <div class="status-badge">No Open Vacancies</div>
         <h3>We are not currently hiring</h3>
-        <p>Veritas Data Services is a growing data and compliance consultancy focused on audit-grade analytics and regulatory-aligned data architecture.</p>
+        <p>Veritas Data Services is a growing digital consultancy specialising in web development, business systems, Android apps and data analytics.</p>
         <p>At this time we do not have any open vacancies. We encourage interested candidates to check back periodically as opportunities become available.</p>
       </div>
 
-      <!-- Values Card -->
       <div class="careers-values-card">
         <h3>What We Look For</h3>
         <div class="values-grid">
@@ -270,27 +255,26 @@
             <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
             <div class="value-text">
               <div class="value-title">Rigor</div>
-              <div class="value-desc">We build analytics that withstand scrutiny</div>
+              <div class="value-desc">We build solutions that withstand real world pressure</div>
             </div>
           </div>
           <div class="value-item">
             <div class="value-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
             <div class="value-text">
               <div class="value-title">Clarity</div>
-              <div class="value-desc">Findings must be traceable and reproducible</div>
+              <div class="value-desc">Every deliverable must be traceable and reliable</div>
             </div>
           </div>
           <div class="value-item">
             <div class="value-icon"><i class="fas fa-scale-balanced"></i></div>
             <div class="value-text">
               <div class="value-title">Ethics</div>
-              <div class="value-desc">Ethical data practice is non-negotiable</div>
+              <div class="value-desc">Honest work and transparent practice is non-negotiable</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Contact Card -->
       <div class="careers-contact-card">
         <p>If you believe your skills align with our work and want to make a speculative introduction, feel free to reach out.</p>
         <p><a href="mailto:info@veritasdataservices.com"><i class="fas fa-envelope" style="margin-right:6px;"></i>info@veritasdataservices.com</a></p>
@@ -299,7 +283,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer id="contact" class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -319,9 +302,10 @@
         </div>
       </div>
       <p class="copyright">
-  Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>
-  Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.
-</p>
+        Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>
+        Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.
+      </p>
+    </div>
   </footer>
 
   <script>
