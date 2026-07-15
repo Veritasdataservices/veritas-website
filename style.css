@@ -278,9 +278,9 @@ display: flex;
 
 justify-content: center;
 
-align-items: flex-start;
+align-items: center;
 
-margin-top: -4px;
+margin-top: 0;
 
 margin-right: 10px;
 
@@ -293,6 +293,10 @@ width: 100%;
 max-width: 100px;
 
 height: auto;
+
+display: block;
+
+margin: 0 auto;
 
 border-radius: 6px;
 
