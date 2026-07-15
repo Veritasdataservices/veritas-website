@@ -894,7 +894,7 @@ RESPONSIVE
 }
 
 .header-controls {
-  margin-left: 0;
+  margin-left: auto;
 }
 
 .menu-toggle {
@@ -916,7 +916,7 @@ padding: 3rem 1rem 3.5rem;
 .hero-inner {
   gap: 1rem;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
 }
 
@@ -925,14 +925,14 @@ padding: 3rem 1rem 3.5rem;
   margin-top: 0.3rem;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .hero-media img {
   width: 100%;
   max-width: 95px;
   height: auto;
-  margin: 0;
+  margin: 0 auto;
   display: block;
 }
 
@@ -1306,20 +1306,3 @@ pointer-events: auto;
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
