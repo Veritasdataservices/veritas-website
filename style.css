@@ -194,6 +194,7 @@ text-decoration: underline;
 .header-controls {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 /* Hamburger button styling */
