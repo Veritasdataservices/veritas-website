@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Systems &amp; Software | Veritas Data Services</title>
+
+  <meta name="description" content="Custom business software built by Veritas Data Services, including the VDS School Management System, currently in development. Purpose-built systems for real operations.">
+  <meta name="keywords" content="Veritas Data Services systems, school management system Kenya, business management software, custom software Malindi Kenya, VDS School Management System">
+  <meta name="author" content="Veritas Data Services">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Systems & Software | Veritas Data Services">
+  <meta property="og:description" content="Custom business software built by Veritas Data Services, including the VDS School Management System, currently in development.">
+  <meta property="og:image" content="https://www.veritasdataservices.com/veritas_logo_banner.jpg">
+  <meta property="og:url" content="https://www.veritasdataservices.com/Systems.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.veritasdataservices.com/veritas_logo_banner.jpg">
+
+  <link rel="canonical" href="https://www.veritasdataservices.com/Systems.html">
+  <link rel="icon" href="veritas_icon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="veritas_logo_banner.jpg" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Systems & Software | Veritas Data Services",
+    "url": "https://www.veritasdataservices.com/Systems.html",
+    "isPartOf": {
+      "@type": "Organization",
+      "name": "Veritas Data Services",
+      "url": "https://www.veritasdataservices.com"
+    }
+  }
+  </script>
+
+  <style>
+    .systems-page-header {
+      background: #1f4730;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .systems-page-header h1 {
+      color: #ffffff;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .systems-page-header .brand-separator {
+      background: #c8a96e;
+      margin: 0.8rem auto 1rem;
+    }
+
+    .systems-page-header p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .systems-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .systems-status-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      border: 1px solid rgba(31,71,48,0.1);
+      box-shadow: 0 4px 20px rgba(31,71,48,0.07);
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .systems-status-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #1f4730;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #e8f3ed;
+      border: 1px solid rgba(31,71,48,0.15);
+      color: #1f4730;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .status-badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #1f4730;
+      border-radius: 50%;
+    }
+
+    .systems-status-card h3 {
+      color: #1f4730;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .systems-status-card p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
+    }
+
+    .systems-features-card {
+      background: #1f4730;
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 4px 20px rgba(31,71,48,0.12);
+      margin-bottom: 1.5rem;
+    }
+
+    .systems-features-card h3 {
+      color: #c8a96e;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-icon i {
+      color: #c8a96e;
+      font-size: 0.85rem;
+    }
+
+    .feature-text { flex: 1; }
+
+    .feature-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .feature-desc {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .systems-contact-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.8rem 2.2rem;
+      border: 1px solid rgba(31,71,48,0.1);
+      box-shadow: 0 4px 20px rgba(31,71,48,0.07);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .systems-contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #c8a96e;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .systems-contact-card p {
+      font-size: 0.95rem;
+      color: #4a5568;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+
+    .systems-contact-card a {
+      color: #1f4730;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .systems-contact-card a:hover { text-decoration: underline; }
+
+    .copyright {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .systems-status-card,
+      .systems-features-card,
+      .systems-contact-card { padding: 1.4rem 1.2rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .systems-page-header { padding: 1.8rem 1rem; }
+      .footer-grid { flex-direction: column; gap: 1rem; }
+      .site-footer { padding: 1.5rem 1rem; }
+      .nav { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolio</a>
+        <a href="Systems.html">Systems</a>
+        <a href="careers.html">Careers</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="systems-page-header">
+    <h1>Systems &amp; Software</h1>
+    <div class="brand-separator"></div>
+    <p>Custom business systems built for how organisations actually operate, not templated solutions.</p>
+  </div>
+
+  <main>
+    <div class="systems-wrap">
+
+      <div class="systems-status-card">
+        <div class="status-badge">In Development</div>
+        <h3>VDS School Management System</h3>
+        <p>A suite of five purpose-built desktop applications: Administration, Finance, Academics, Management and Human Resource. Together, they share a single backend so a school’s records stay consistent across every department.</p>
+        <p>Each application is designed to work offline-first, with records syncing across the suite through a unique key generated at setup, and a nightly backup routine so records are never dependent on a single machine or connection.</p>
+        <p>This system is currently in active development and has not yet been released. It is being built and tested before being offered to schools as a client deployment.</p>
+      </div>
+
+      <div class="systems-features-card">
+        <h3>How It's Being Built</h3>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
+            <div class="feature-text">
+              <div class="feature-title">Five Linked Apps</div>
+              <div class="feature-desc">Administration, Finance, Academics, Management and HR: one shared record system</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+            <div class="feature-text">
+              <div class="feature-title">Offline-First</div>
+              <div class="feature-desc">Built to keep working reliably without a constant internet connection</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="feature-text">
+              <div class="feature-title">Centralised Access</div>
+              <div class="feature-desc">Password and access management handled in one place, not scattered per app</div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+            <div class="feature-text">
+              <div class="feature-title">Nightly Backup</div>
+              <div class="feature-desc">Automatic Google Drive backup built in as standard disaster recovery</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="systems-contact-card">
+        <p>Running a school or business and curious whether a custom system like this could work for you? Get in touch. Early conversations help shape what gets built next.</p>
+        <p><a href="mailto:info@veritasdataservices.com"><i class="fas fa-envelope" style="margin-right:6px;"></i>info@veritasdataservices.com</a></p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></p>
+          <p><i class="fas fa-phone"></i> Phone / WhatsApp: <a href="tel:+254114815449">+254 114 815 449</a></p>
+
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <ul class="social">
+            <li><a href="https://www.instagram.com/veritas_dataservices" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/veritas-data-services" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/veritasdataservices" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://github.com/veritasdataservices" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>
+        Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

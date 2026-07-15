@@ -190,6 +190,26 @@ text-decoration: underline;
   border-radius: 3px;
 }
 
+.consultation-note{
+    max-width:900px;
+    margin:50px auto 0;
+    padding:25px 30px;
+    border-left:5px solid var(--primary);
+    background:rgba(200,169,110,.08);
+    border-radius:12px;
+}
+
+.consultation-note h4{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+.consultation-note p{
+    margin-bottom:12px;
+    line-height:1.8;
+    color:var(--text-secondary);
+}
+
 
 /* ===========================
 
@@ -227,13 +247,13 @@ max-width: 1100px;
 
 .hero-media {
 
-flex: 0 0 420px;
+flex: 0 0 240px;
 
 display: flex;
 
 justify-content: center;
 
-align-items:center;
+align-items: center;
 
 }
 
@@ -241,7 +261,7 @@ align-items:center;
 
 width: 100%;
 
-max-width: 420px;
+max-width: 220px;
 
 height: auto;
 
