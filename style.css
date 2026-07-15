@@ -879,6 +879,27 @@ RESPONSIVE
 
 @media (max-width: 768px) {
 
+.header-inner {
+  justify-content: center;
+  position: relative;
+}
+
+.header-controls {
+  margin-left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.menu-toggle {
+  padding: 4px 8px;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  margin: 5px 0;
+}
+
 .hero {
 
 padding: 3rem 1rem 3.5rem;
