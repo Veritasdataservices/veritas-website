@@ -63,6 +63,30 @@ justify-content: space-between;
 
 gap: 1rem;
 
+position: relative;
+
+}
+
+.header-brand {
+
+display: inline-flex;
+
+align-items: center;
+
+}
+
+.header-brand img {
+
+display: block;
+
+height: 42px;
+
+width: auto;
+
+max-width: 220px;
+
+object-fit: contain;
+
 }
 
 .brand img.logo { height:56px; object-fit:contain;
@@ -235,9 +259,9 @@ background: #e8f3ed;
 
 display: flex;
 
-gap: 2rem;
+gap: 2.4rem;
 
-align-items: center;
+align-items: flex-start;
 
 width: 100%;
 
@@ -247,13 +271,17 @@ max-width: 1100px;
 
 .hero-media {
 
-flex: 0 0 200px;
+flex: 0 0 120px;
 
 display: flex;
 
 justify-content: center;
 
-align-items: center;
+align-items: flex-start;
+
+margin-top: -4px;
+
+margin-right: 10px;
 
 }
 
@@ -261,7 +289,7 @@ align-items: center;
 
 width: 100%;
 
-max-width: 180px;
+max-width: 100px;
 
 height: auto;
 
@@ -857,7 +885,7 @@ padding: 3rem 1rem 3.5rem;
 }
 
 .hero-inner {
-  gap: 1.2rem;
+  gap: 1rem;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
@@ -865,7 +893,7 @@ padding: 3rem 1rem 3.5rem;
 
 .hero-media {
   flex: none;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -873,7 +901,7 @@ padding: 3rem 1rem 3.5rem;
 
 .hero-media img {
   width: 100%;
-  max-width: 150px;
+  max-width: 95px;
   height: auto;
   margin: 0;
   display: block;
@@ -881,7 +909,7 @@ padding: 3rem 1rem 3.5rem;
 
 .hero-text {
   padding: 0;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .hero-text h1 {
