@@ -39,7 +39,7 @@ background: #1f4730;
 
 color: white;
 
-padding: 0.6rem 0;
+padding: 0.85rem 0;
 
 }
 
@@ -879,9 +879,14 @@ RESPONSIVE
 
 @media (max-width: 768px) {
 
+.site-header {
+  padding: 1rem 0;
+}
+
 .header-inner {
   justify-content: space-between;
   position: relative;
+  min-height: 44px;
 }
 
 .header-controls {
