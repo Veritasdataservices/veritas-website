@@ -276,7 +276,7 @@ flex: 0 0 120px;
 
 display: flex;
 
-justify-content: center;
+justify-content: flex-end;
 
 align-items: center;
 
@@ -296,7 +296,7 @@ height: auto;
 
 display: block;
 
-margin: 0 auto;
+margin: 0 0 0 auto;
 
 border-radius: 6px;
 
