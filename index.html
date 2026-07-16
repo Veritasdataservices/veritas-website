@@ -14,15 +14,15 @@
   <meta property="og:title" content="Digital Solutions Built to Last | Veritas Data Services">
   <meta property="og:description" content="Veritas Data Services helps organisations through business technology consulting, business systems, AI development, business process automation, data analytics and modern web solutions.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.veritasdataservices.com/veritas_logo_banner.jpg">
+  <meta property="og:image" content="https://www.veritasdataservices.com/veritas_logo_banner.png">
   <meta property="og:url" content="https://www.veritasdataservices.com/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Digital Solutions Built to Last | Veritas Data Services">
   <meta name="twitter:description" content="Veritas Data Services helps organisations through business technology consulting, business systems, AI development, business process automation, data analytics and modern web solutions.">
-  <meta name="twitter:image" content="https://www.veritasdataservices.com/veritas_logo_banner.jpg">
+  <meta name="twitter:image" content="https://www.veritasdataservices.com/veritas_logo_banner.png">
 
-  <link rel="icon" href="veritas_logo_banner.jpg" type="image/jpeg" sizes="256x256">
+  <link rel="icon" href="veritas_logo_banner.png" type="image/png" sizes="256x256">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -33,8 +33,8 @@
     "@type": "ProfessionalService",
     "name": "Veritas Data Services",
     "url": "https://www.veritasdataservices.com",
-    "logo": "https://www.veritasdataservices.com/veritas_logo_banner.jpg",
-    "image": "https://www.veritasdataservices.com/veritas_logo_banner.jpg",
+    "logo": "https://www.veritasdataservices.com/veritas_logo_banner.png",
+    "image": "https://www.veritasdataservices.com/veritas_logo_banner.png",
     "description": "Veritas Data Services partners with organisations to deliver business systems, business intelligence, workflow automation, website development and digital transformation services that drive measurable results.",
     "email": "info@veritasdataservices.com",
     "telephone": "+254114815449",
@@ -64,7 +64,10 @@
   </script>
 
   <style>
-    .hero-media img { max-width: 320px; width: 100%; height: auto; object-fit: contain; }
+    .hero-text { position: relative; }
+    .hero-text > *:not(.site-watermark) { position: relative; z-index: 1; }
+    .home-header { padding: 1.5rem 0; }
+    @media (max-width: 768px) { .home-header { padding: 1.2rem 0; } }
 
     .brand { display: inline-flex; align-items: center; }
     .brand img { height: 44px; width: auto; max-width: 220px; display: block; object-fit: contain; }
@@ -145,6 +148,59 @@
     .packages { padding: 4rem 1rem; background: #fff; }
     .packages > .container > h2 { color: #1f4730; margin-bottom: 0.4rem; text-align: center; }
     .packages-gold-line { width: 40px; height: 2px; background: #c8a96e; border-radius: 2px; margin: 0 auto 2rem; }
+    .process { padding: 2.5rem 1rem; background: #f4f9f6; text-align: center; }
+    .process h2 { color: #1f4730; margin-bottom: 0; }
+    .process-gold-line { width: 40px; height: 2px; background: #c8a96e; border-radius: 2px; margin: 0.75rem auto 1.5rem; }
+    .process-intro { font-weight: 600; color: #1f4730; font-size: 1.05rem; margin-bottom: 0.6rem; }
+    .process-lead { max-width: 700px; margin: 0 auto 2.5rem; color: #2f4b43; line-height: 1.6; }
+    .process-steps { max-width: 800px; margin: 0 auto; text-align: left; }
+    .process-step { display: flex; gap: 1.2rem; padding: 1.6rem 0; border-bottom: 1px solid #e0ece5; }
+    .process-step:last-child { border-bottom: none; }
+    .process-number { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: #1f4730; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
+    .process-content h3 { color: #1f4730; margin: 0 0 0.5rem; font-size: 1.15rem; }
+    .process-content p { color: #333; margin: 0 0 0.6rem; line-height: 1.6; }
+    .process-includes-label { font-weight: 600; color: #1f4730; margin: 0.6rem 0 0.4rem !important; }
+    .process-list { margin: 0 0 0.4rem 1.2rem; padding: 0; color: #2f4b43; }
+    .process-list li { margin-bottom: 0.35rem; line-height: 1.5; }
+    @media (max-width: 600px) {
+      .process-step { gap: 0.8rem; }
+      .process-number { width: 38px; height: 38px; font-size: 0.85rem; }
+    }
+    .process-step.reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .process-step.reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .process-step.reveal:nth-of-type(1) { transition-delay: 0s; }
+    .process-step.reveal:nth-of-type(2) { transition-delay: 0.1s; }
+    .process-step.reveal:nth-of-type(3) { transition-delay: 0.2s; }
+    .process-step.reveal:nth-of-type(4) { transition-delay: 0.3s; }
+    .process-step.reveal:nth-of-type(5) { transition-delay: 0.4s; }
+    .process-step.reveal:nth-of-type(6) { transition-delay: 0.5s; }
+    .reveal-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .packages-grid .reveal-card:nth-of-type(1) { transition-delay: 0s; }
+    .packages-grid .reveal-card:nth-of-type(2) { transition-delay: 0.08s; }
+    .packages-grid .reveal-card:nth-of-type(3) { transition-delay: 0.16s; }
+    .packages-grid .reveal-card:nth-of-type(4) { transition-delay: 0.24s; }
+    .packages-grid .reveal-card:nth-of-type(5) { transition-delay: 0.32s; }
+    .packages-grid .reveal-card:nth-of-type(6) { transition-delay: 0.4s; }
+    .packages-grid .reveal-card:nth-of-type(7) { transition-delay: 0.48s; }
+    .packages-grid .reveal-card:nth-of-type(8) { transition-delay: 0.56s; }
+    .packages-grid .reveal-card:nth-of-type(9) { transition-delay: 0.64s; }
+    .packages-grid .reveal-card:nth-of-type(10) { transition-delay: 0.72s; }
+
     .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
 
     .package-card {
@@ -204,7 +260,7 @@
 
 <body>
 
-  <header class="site-header">
+  <header class="site-header home-header">
     <div class="container header-inner">
       <div class="header-controls">
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
@@ -216,12 +272,14 @@
         <a href="#about"><i class="fas fa-circle-info"></i> About</a>
         <a href="#" id="openConsultPopup"><i class="fas fa-calendar-check"></i> Book Consultation</a>
         <a href="#services"><i class="fas fa-layer-group"></i> Services</a>
+        <a href="how-we-work.html"><i class="fas fa-diagram-project"></i> How We Work</a>
         <a href="#packages"><i class="fas fa-tags"></i> Packages</a>
         <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
         <a href="Portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
         <a href="Systems.html"><i class="fas fa-cogs"></i> Systems</a>
         <a href="payment.html"><i class="fas fa-mobile-screen-button"></i> Payment</a>
         <a href="careers.html"><i class="fas fa-user-tie"></i> Careers</a>
+        <a href="client-policy.html"><i class="fas fa-file-shield"></i> Client Policies</a>
       </div>
     </div>
   </header>
@@ -230,10 +288,8 @@
 
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <div class="hero-media">
-          <img id="heroImage" src="veritas_logo_banner.jpg" alt="Veritas Data Services" />
-        </div>
         <div class="hero-text">
+          <img class="site-watermark" src="veritas_logo_watermark.png" alt="" aria-hidden="true" />
           <span class="hero-tagline">Business Intelligence, Automation & Software Solutions</span>
           <h1>Digital Solutions Build to Last</h1>
           <span class="hero-tagline">Websites. Systems. Automation. Analytics.</span>
@@ -303,13 +359,106 @@
       </div>
     </section>
 
+    <section id="process" class="process">
+      <div class="container">
+        <h2>How We Work</h2>
+        <div class="process-gold-line"></div>
+        <p class="process-intro">Every successful project begins with understanding.</p>
+        <p class="process-lead">At Veritas Data Services, we follow a structured engagement process designed to deliver technology solutions that align with your business goals. From discovery to deployment, every stage is carefully planned to ensure transparency, quality and long-term value.</p>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="process-number">01</div>
+            <div class="process-content">
+              <h3>Business Discovery &amp; Strategy</h3>
+              <p>Every engagement begins with understanding your business, objectives and operational requirements.</p>
+              <p>During this stage, we work with you to identify challenges, explore opportunities and define the most suitable technology solution before development begins.</p>
+              <p class="process-includes-label">This engagement includes:</p>
+              <ul class="process-list">
+                <li>Business consultation</li>
+                <li>Requirements gathering</li>
+                <li>Business process analysis</li>
+                <li>Solution planning</li>
+                <li>Project scoping</li>
+                <li>Strategic recommendations</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">02</div>
+            <div class="process-content">
+              <h3>Proposal &amp; Project Planning</h3>
+              <p>Following Discovery &amp; Strategy, we prepare a detailed project proposal tailored to your organisation.</p>
+              <p>Your proposal clearly outlines the project scope, deliverables, timeline, investment and payment schedule before any development begins.</p>
+              <p class="process-includes-label">Every proposal includes:</p>
+              <ul class="process-list">
+                <li>Project objectives</li>
+                <li>Scope of work</li>
+                <li>Deliverables</li>
+                <li>Timeline</li>
+                <li>Investment</li>
+                <li>Project roadmap</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">03</div>
+            <div class="process-content">
+              <h3>Design &amp; Development</h3>
+              <p>Once the proposal has been approved, development begins.</p>
+              <p>Whether we're building a website, business system, automation workflow or analytics solution, every project is developed using modern technologies and industry best practices.</p>
+              <p>Our focus is always on delivering solutions that are secure, scalable and built around your business rather than generic templates.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">04</div>
+            <div class="process-content">
+              <h3>Testing &amp; Quality Assurance</h3>
+              <p>Before deployment, every solution undergoes comprehensive testing to ensure reliability, functionality and performance.</p>
+              <p>This stage allows us to identify any final improvements before your solution goes live.</p>
+              <p class="process-includes-label">Quality assurance includes:</p>
+              <ul class="process-list">
+                <li>Functionality testing</li>
+                <li>Performance testing</li>
+                <li>User experience review</li>
+                <li>Final project validation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">05</div>
+            <div class="process-content">
+              <h3>Deployment &amp; Project Handover</h3>
+              <p>After final approval, your solution is deployed and formally handed over.</p>
+              <p>Where applicable, we provide documentation, user guidance and onboarding to ensure a smooth transition into day-to-day operations.</p>
+              <p>Deployment is only considered complete once the agreed project deliverables have been successfully delivered.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">06</div>
+            <div class="process-content">
+              <h3>Growth &amp; Future Enhancements</h3>
+              <p>Technology should evolve with your business.</p>
+              <p>As your organisation grows, Veritas Data Services remains available to assist with future improvements, additional features, system upgrades, automation opportunities and new technology initiatives through separate project engagements.</p>
+              <p>Whether expanding an existing solution or developing something entirely new, we continue partnering with organisations that are committed to long-term growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="packages" class="packages">
       <div class="container">
         <h2>Our Packages</h2>
         <div class="packages-gold-line"></div>
         <div class="packages-grid">
 
-          <div class="package-card">
+          <div class="package-card reveal-card">
   <h3>Starter Website</h3>
   <div class="package-price">Ksh 58,000 <span>once off</span></div>
   <p>A professional website for startups and small businesses looking to establish a credible online presence.</p>
@@ -328,7 +477,7 @@
   </button>
 </div>
 
-  <div class="package-card featured">
+  <div class="package-card featured reveal-card">
   <h3>Business Website</h3>
   <div class="package-price">Ksh 95,000+ <span>once off</span></div>
   <p>A professionally designed business website for established companies looking to strengthen their brand and generate quality leads.</p>
@@ -347,7 +496,7 @@
   </button>
 </div>
 
-<div class="package-card">
+<div class="package-card reveal-card">
   <h3>Premium Website</h3>
   <div class="package-price">From Ksh 150,000 <span>project-based</span></div>
 
@@ -372,7 +521,7 @@
   </button>
 </div>
 
-<div class="package-card">
+<div class="package-card reveal-card">
   <h3>Data Analytics & Business Intelligence</h3>
 
   <div class="package-price">
@@ -402,7 +551,7 @@
   </button>
 </div>
 
-          <div class="package-card">
+          <div class="package-card reveal-card">
   <h3>Discovery & Strategy</h3>
   <div class="package-price">
     From Ksh 15,000 <span>credited toward your project</span>
@@ -431,7 +580,7 @@ id="discoveryConsultBtn" style="width:100%; justify-content:center; background:#
   </button>
 </div>
 
-<div class="package-card">
+<div class="package-card reveal-card">
 
   <h3>Discovery & Strategy Policy</h3>
 
@@ -450,7 +599,7 @@ your final project when you proceed with Veritas Data Services.
 
 </div>
 
-          <div class="package-card">
+          <div class="package-card reveal-card">
   <h3>Custom Business System</h3>
   <div class="package-price">From Ksh 250,000 <span>project-based</span></div>
 
@@ -475,7 +624,7 @@ your final project when you proceed with Veritas Data Services.
   </button>
 </div>
 
-<div class="package-card">
+<div class="package-card reveal-card">
   <h3>Business Process Automation</h3>
 
   <div class="package-price">
@@ -505,7 +654,7 @@ your final project when you proceed with Veritas Data Services.
   </button>
 </div>
 
-          <div class="package-card">
+          <div class="package-card reveal-card">
   <h3>Android Application</h3>
   <div class="package-price">From Ksh 220,000 <span>project-based</span></div>
 
@@ -529,7 +678,7 @@ your final project when you proceed with Veritas Data Services.
   </button>
 </div>
 
-          <div class="package-card">
+          <div class="package-card reveal-card">
   <h3>Monthly Maintenance</h3>
   <div class="package-price">Ksh 8,000+ <span>per month</span></div>
 
@@ -828,6 +977,40 @@ Object.keys(buttonMap).forEach(id => {
           document.getElementById('consult_service').value = btn.dataset.val;
         });
       });
+
+      // Scroll-reveal for How We Work steps
+      const revealSteps = document.querySelectorAll('.process-step.reveal');
+      if ('IntersectionObserver' in window) {
+        const stepObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        revealSteps.forEach(el => stepObserver.observe(el));
+      } else {
+        revealSteps.forEach(el => el.classList.add('is-visible'));
+      }
+
+      // Scroll-reveal for package cards
+      const revealCards = document.querySelectorAll('.reveal-card');
+      if ('IntersectionObserver' in window) {
+        const cardObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        revealCards.forEach(el => cardObserver.observe(el));
+      } else {
+        revealCards.forEach(el => el.classList.add('is-visible'));
+      }
     });
   </script>
 

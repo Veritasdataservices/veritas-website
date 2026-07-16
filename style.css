@@ -27,6 +27,31 @@ line-height: 1.6;
 
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+.site-watermark {
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  opacity: 0.14;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .site-watermark {
+    width: 100vw;
+    opacity: 0.11;
+  }
+}
+
 /* ===========================
 
 HEADER
@@ -40,6 +65,12 @@ background: #1f4730;
 color: white;
 
 padding: 0.85rem 0;
+
+position: relative;
+
+z-index: 1000;
+
+overflow: visible;
 
 }
 
@@ -136,7 +167,7 @@ text-decoration: underline;
   display: none;                 
   position: absolute;
 
-  top: 70px;                     
+  top: calc(100% + 8px);
   right: 16px;                  /* ✅ same side as hamburger */
 
   width: 240px;
@@ -148,7 +179,7 @@ text-decoration: underline;
 
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 
-  z-index: 2000;
+  z-index: 1001;
 }
 
 
