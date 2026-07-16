@@ -26,6 +26,11 @@
     .process-step ul { margin: 0.75rem 0 0.85rem 1.2rem; color: #4a5568; }
     .process-step li { margin: 0.35rem 0; }
     @media (max-width: 600px) { .process-page-header { padding: 2.5rem 1rem; } .process-wrap { padding: 2.5rem 1rem; } .process-step { grid-template-columns: 1fr; gap: 0.8rem; padding: 1.35rem; } }
+    .site-footer { width: 100%; box-sizing: border-box; }
+    @media (max-width: 600px) {
+      .site-footer { padding: 1.5rem 1rem; }
+    }
+    .copyright { font-size: 0.88rem; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; text-align: center; margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.7; }
   </style>
 </head>
 <body>
@@ -124,6 +129,7 @@
           <h3>Contact Us</h3>
           <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></p>
           <p><i class="fas fa-phone"></i> Phone / WhatsApp: <a href="tel:+254114815449">+254 114 815 449</a></p>
+
         </div>
         <div>
           <h3>Follow Us</h3>
@@ -131,12 +137,17 @@
             <li><a href="https://www.instagram.com/veritas_dataservices" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
             <li><a href="https://www.linkedin.com/company/veritas-data-services" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             <li><a href="https://www.facebook.com/veritasdataservices" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://github.com/veritasdataservices" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
           </ul>
         </div>
       </div>
-      <p class="copyright">Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.</p>
+      <p class="copyright">
+        Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>
+        Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.
+      </p>
     </div>
   </footer>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
