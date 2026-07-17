@@ -1338,3 +1338,32 @@ pointer-events: auto;
     display: none;
   }
 }
+
+/* ===== hero image responsive override — place near end of file ===== */
+.hero-media {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-media img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+/* mobile-specific sizing (keeps image visible but not huge) */
+@media (max-width: 768px) {
+  .hero-media img {
+    width: 40vw;
+    max-width: 220px;
+    height: auto;
+  }
+}
