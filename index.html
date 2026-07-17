@@ -117,6 +117,15 @@
       .hero-photos { max-width: 100%; margin-top: 1rem; }
       .hero-photo-main { height: 260px; }
       .hero-photo-accent { height: 110px; bottom: -20px; left: -16px; }
+      .hero-text { display: contents; }
+      .hero-inner .hero-tagline:nth-of-type(1) { order: 1; }
+      .hero-inner h1 { order: 2; }
+      .hero-photos { order: 3; margin: 1.2rem 0; }
+      .hero-inner .hero-tagline:nth-of-type(2) { order: 4; }
+      .hero-inner .hero-divider { order: 5; }
+      .hero-inner p.lead { order: 6; }
+      .hero-inner p:not(.lead) { order: 7; }
+      .hero-inner .hero-cta { order: 8; }
     }
     @media (max-width: 480px) {
       .hero-photo-main { height: 210px; }
@@ -346,8 +355,8 @@
           </div>
         </div>
         <div class="hero-photos">
-          <img class="hero-photo-main" src="heroimage2.jpg" alt="Veritas Data Services team reviewing an analytics dashboard" loading="lazy" />
-          <img class="hero-photo-accent" src="heroimage.jpg" alt="Business intelligence analysis at Veritas Data Services" loading="lazy" />
+          <img class="hero-photo-main" src="heroimage2.png" alt="Veritas Data Services team reviewing an analytics dashboard" loading="lazy" />
+          <img class="hero-photo-accent" src="heroimage.png" alt="Business intelligence analysis at Veritas Data Services" loading="lazy" />
         </div>
       </div>
     </section>
