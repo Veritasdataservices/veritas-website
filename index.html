@@ -14,15 +14,16 @@
   <meta property="og:title" content="Digital Solutions Built to Last | Veritas Data Services">
   <meta property="og:description" content="Veritas Data Services helps organisations through business technology consulting, business systems, AI development, business process automation, data analytics and modern web solutions.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.veritasdataservices.com/veritas_logo_banner.png">
+  <meta property="og:image" content="https://www.veritasdataservices.com/websitelogo.png">
   <meta property="og:url" content="https://www.veritasdataservices.com/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Digital Solutions Built to Last | Veritas Data Services">
   <meta name="twitter:description" content="Veritas Data Services helps organisations through business technology consulting, business systems, AI development, business process automation, data analytics and modern web solutions.">
-  <meta name="twitter:image" content="https://www.veritasdataservices.com/veritas_logo_banner.png">
+  <meta name="twitter:image" content="https://www.veritasdataservices.com/websitelogo.png">
 
-  <link rel="icon" href="veritas_logo_banner.png" type="image/png" sizes="256x256">
+  <link rel="icon" href="websitelogo.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="websitelogo.png">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -33,8 +34,8 @@
     "@type": "ProfessionalService",
     "name": "Veritas Data Services",
     "url": "https://www.veritasdataservices.com",
-    "logo": "https://www.veritasdataservices.com/veritas_logo_banner.png",
-    "image": "https://www.veritasdataservices.com/veritas_logo_banner.png",
+    "logo": "https://www.veritasdataservices.com/websitelogo.png",
+    "image": "https://www.veritasdataservices.com/websitelogo.png",
     "description": "Veritas Data Services partners with organisations to deliver business systems, business intelligence, workflow automation, website development and digital transformation services that drive measurable results.",
     "email": "info@veritasdataservices.com",
     "telephone": "+254114815449",
@@ -86,6 +87,40 @@
     }
 
     .hero-divider { width: 40px; height: 2px; background: #c8a96e; border-radius: 2px; margin: 1.2rem 0; }
+
+    .hero-photos {
+      position: relative;
+      flex: 1 1 380px;
+      max-width: 440px;
+      align-self: center;
+    }
+    .hero-photo-main {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 16px 36px rgba(31,71,48,0.22);
+      display: block;
+    }
+    .hero-photo-accent {
+      position: absolute;
+      bottom: -28px;
+      left: -28px;
+      width: 48%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 5px solid #f4f9f6;
+      box-shadow: 0 12px 26px rgba(31,71,48,0.25);
+    }
+    @media (max-width: 768px) {
+      .hero-photos { max-width: 100%; margin-top: 1rem; }
+      .hero-photo-main { height: 260px; }
+      .hero-photo-accent { height: 110px; bottom: -20px; left: -16px; }
+    }
+    @media (max-width: 480px) {
+      .hero-photo-accent { display: none; }
+    }
 
     .btn.primary {
       background: #1f4730; color: #ffffff; border: 1px solid #1f4730;
@@ -158,6 +193,19 @@
     .process-step:last-child { border-bottom: none; }
     .process-number { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: #1f4730; color: #c8a96e; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
     .process-content h3 { color: #1f4730; margin: 0 0 0.5rem; font-size: 1.15rem; }
+    .process-banner-photo {
+      width: 100%;
+      max-width: 700px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 14px 32px rgba(31,71,48,0.18);
+      display: block;
+      margin: 0 auto 2.5rem;
+    }
+    @media (max-width: 600px) {
+      .process-banner-photo { height: 200px; }
+    }
     .process-content p { color: #333; margin: 0 0 0.6rem; line-height: 1.6; }
     .process-includes-label { font-weight: 600; color: #1f4730; margin: 0.6rem 0 0.4rem !important; }
     .process-list { margin: 0 0 0.4rem 1.2rem; padding: 0; color: #2f4b43; }
@@ -305,6 +353,10 @@
             </a>
           </div>
         </div>
+        <div class="hero-photos">
+          <img class="hero-photo-main" src="heroimage2.jpg" alt="Veritas Data Services team reviewing an analytics dashboard" loading="lazy" />
+          <img class="hero-photo-accent" src="heroimage.jpg" alt="Business intelligence analysis at Veritas Data Services" loading="lazy" />
+        </div>
       </div>
     </section>
 
@@ -361,6 +413,7 @@
 
     <section id="process" class="process">
       <div class="container">
+        <img class="process-banner-photo" src="discoveryimage.jpg" alt="Business discovery consultation meeting at Veritas Data Services" loading="lazy" />
         <h2>How We Work</h2>
         <div class="process-gold-line"></div>
         <p class="process-intro">Every successful project begins with understanding.</p>
@@ -709,6 +762,7 @@ your final project when you proceed with Veritas Data Services.
 
     <section id="portfolio-preview" class="portfolio-preview">
       <div class="container">
+        <img class="process-banner-photo" src="beforerecentwrk.jpg" alt="Veritas Data Services team reviewing analytics dashboard" loading="lazy" />
         <h2>Recent Work</h2>
         <div class="portfolio-gold-line"></div>
         <div class="portfolio-preview-grid">
