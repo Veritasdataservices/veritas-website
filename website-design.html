@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design & Development Services in Kenya | Veritas Data Services</title>
+  <meta name="description" content="Professional website design and custom web development for SMEs and organisations in Kenya — fast, mobile-responsive, secure websites built by Veritas Data Services." />
+  <meta name="keywords" content="website design Kenya, web development Kenya, business website Malindi Kenya, custom website design company, Veritas Data Services websites" />
+  <meta name="author" content="Veritas Data Services" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <meta property="og:title" content="Website Design & Development Services | Veritas Data Services" />
+  <meta property="og:description" content="Professional, fast, mobile-responsive websites built for SMEs and organisations in Kenya." />
+  <meta property="og:image" content="https://www.veritasdataservices.com/websitelogo.png" />
+  <meta property="og:url" content="https://www.veritasdataservices.com/website-design.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.veritasdataservices.com/websitelogo.png" />
+
+  <link rel="canonical" href="https://www.veritasdataservices.com/website-design.html" />
+  <link rel="icon" href="websitelogo.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="websitelogo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Website Design & Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "Veritas Data Services",
+      "url": "https://www.veritasdataservices.com"
+    },
+    "areaServed": "Kenya",
+    "url": "https://www.veritasdataservices.com/website-design.html"
+  }
+  </script>
+
+  <style>
+    .service-page-header { background: #1f4730; color: #fff; padding: 3.5rem 1.5rem; text-align: center; }
+    .service-page-header h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.7rem; }
+    .service-page-header p { max-width: 720px; margin: 0 auto; color: rgba(255,255,255,0.82); }
+    .service-page-header .brand-separator { background: #c8a96e; margin: 0.8rem auto 1rem; }
+    .service-wrap { max-width: 940px; margin: 0 auto; padding: 4rem 1rem; }
+    .service-intro { max-width: 780px; margin: 0 auto 2.5rem; text-align: center; color: #4a5568; font-size: 1.03rem; line-height: 1.7; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.4rem; margin-bottom: 2.5rem; }
+    .feature-card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(31,71,48,0.12);
+      border-radius: 12px;
+      padding: 1.7rem 1.8rem;
+      box-shadow: 0 4px 16px rgba(31,71,48,0.06);
+    }
+    .feature-card i { color: #c8a96e; font-size: 1.4rem; margin-bottom: 0.8rem; display: block; }
+    .feature-card h3 { color: #1f4730; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .feature-card p { color: #4a5568; font-size: 0.93rem; line-height: 1.65; margin: 0; }
+    .approach-section {
+      background: #1f4730;
+      border-radius: 12px;
+      padding: 2.2rem 2.4rem;
+      margin-bottom: 2.5rem;
+    }
+    .approach-section h2 { color: #c8a96e; font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+    .approach-section p { color: rgba(255,255,255,0.85); line-height: 1.75; margin-bottom: 0.8rem; }
+    .approach-section p:last-child { margin-bottom: 0; }
+    .stack-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 1.5rem 0 2.5rem; }
+    .stack-chip { font-size: 0.85rem; font-weight: 600; color: #1f4730; background: #e8f3ed; padding: 6px 14px; border-radius: 6px; }
+    .service-contact-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.8rem 2.2rem;
+      border: 1px solid rgba(31,71,48,0.1);
+      box-shadow: 0 4px 20px rgba(31,71,48,0.07);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-contact-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #c8a96e; }
+    .service-contact-card p { color: #4a5568; line-height: 1.75; margin-bottom: 0.75rem; }
+    .service-contact-card a { color: #1f4730; font-weight: 700; text-decoration: none; }
+    .service-contact-card a:hover { text-decoration: underline; }
+    .copyright { font-size: 0.88rem; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; text-align: center; margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.7; }
+    .site-footer { width: 100%; box-sizing: border-box; }
+    .reveal-card { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-card.is-visible { opacity: 1; transform: translateY(0); }
+    .feature-grid .reveal-card:nth-of-type(1) { transition-delay: 0s; }
+    .feature-grid .reveal-card:nth-of-type(2) { transition-delay: 0.08s; }
+    .feature-grid .reveal-card:nth-of-type(3) { transition-delay: 0.16s; }
+    .feature-grid .reveal-card:nth-of-type(4) { transition-delay: 0.24s; }
+    @media (max-width: 600px) {
+      .service-page-header { padding: 2.5rem 1rem; }
+      .service-wrap { padding: 2.5rem 1rem; }
+      .approach-section { padding: 1.6rem 1.4rem; }
+      .footer-grid { flex-direction: column; gap: 1rem; }
+      .site-footer { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <img class="site-watermark" src="veritas_logo_watermark.png" alt="" aria-hidden="true" />
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-controls">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-hidden" id="navHidden">
+        <a href="index.html"><i class="fas fa-house"></i> Home</a>
+        <a href="index.html#about"><i class="fas fa-circle-info"></i> About</a>
+        <a href="index.html#home"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="index.html#services"><i class="fas fa-layer-group"></i> Services</a>
+        <a href="website-design.html"><i class="fas fa-globe"></i> Website Design</a>
+        <a href="data-analytics.html"><i class="fas fa-chart-line"></i> Data Analytics</a>
+        <a href="automation.html"><i class="fas fa-robot"></i> Automation</a>
+        <a href="android-apps.html"><i class="fas fa-mobile-screen-button"></i> Android Apps</a>
+        <a href="Systems.html"><i class="fas fa-cogs"></i> Systems</a>
+        <a href="how-we-work.html"><i class="fas fa-diagram-project"></i> How We Work</a>
+        <a href="index.html#packages"><i class="fas fa-tags"></i> Packages</a>
+        <a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+        <a href="payment.html"><i class="fas fa-mobile-screen-button"></i> Payment</a>
+        <a href="careers.html"><i class="fas fa-user-tie"></i> Careers</a>
+        <a href="client-policy.html"><i class="fas fa-file-shield"></i> Client Policies</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-page-header">
+      <h1>Website Design &amp; Development</h1>
+      <div class="brand-separator"></div>
+      <p>Fast, mobile-responsive, secure websites, built around your business, not a template.</p>
+    </section>
+
+    <section class="service-wrap">
+      <p class="service-intro">As a full-service website design company, we combine UI/UX-led creative design with custom development. Every site we build is hand-coded rather than assembled from a page builder, which means no bloated plugins, no unnecessary scripts, and full control over how fast and how well it runs.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal-card">
+          <i class="fas fa-mobile-screen"></i>
+          <h3>Mobile-Responsive</h3>
+          <p>Built to look and work correctly on phones first, since that is how most visitors in Kenya browse the web.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <i class="fas fa-gauge-high"></i>
+          <h3>Fast by Default</h3>
+          <p>Hand-coded pages load quickly because there is no unnecessary plugin weight slowing them down.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <i class="fas fa-shield-halved"></i>
+          <h3>Secure Foundations</h3>
+          <p>No dependency on constantly-patched third-party plugins that create ongoing security exposure.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <i class="fas fa-magnifying-glass"></i>
+          <h3>Built for Search</h3>
+          <p>Clean semantic structure, proper meta tags and fast load times, the fundamentals search engines actually reward.</p>
+        </div>
+      </div>
+
+      <div class="approach-section">
+        <h2>Our Approach</h2>
+        <p>We do not deliver templates. Every website is designed around your specific business, brand and operational needs from a single-page presence for a small business to a multi-page site with booking systems, payment integration and client-facing tools.</p>
+        <p>Unlike agencies that rely on fragile page builders, we build using clean, direct code. That gives us full control over site architecture, page speed and long-term maintainability, with none of the bloat that comes from stacking third-party plugins on top of each other.</p>
+      </div>
+
+      <div class="stack-row">
+        <span class="stack-chip">HTML5 &amp; CSS3</span>
+        <span class="stack-chip">JavaScript</span>
+        <span class="stack-chip">Responsive Design</span>
+        <span class="stack-chip">SEO Structure</span>
+        <span class="stack-chip">Payment Integration</span>
+        <span class="stack-chip">Progressive Web Apps</span>
+      </div>
+
+      <div class="service-contact-card">
+        <p>Need a website that actually represents your business, not a generic template? Let's talk about what you're trying to build.</p>
+        <p><a href="mailto:info@veritasdataservices.com"><i class="fas fa-envelope" style="margin-right:6px;"></i>info@veritasdataservices.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@veritasdataservices.com">info@veritasdataservices.com</a></p>
+          <p><i class="fas fa-phone"></i> Phone / WhatsApp: <a href="tel:+254114815449">+254 114 815 449</a></p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <ul class="social">
+            <li><a href="https://www.instagram.com/veritas_dataservices" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/veritas-data-services" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/veritasdataservices" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://github.com/veritasdataservices" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        Veritas Data Services &nbsp;|&nbsp; Operated by <em>Aletheia Veritas Analytics Services</em><br>
+        Registered in Kenya &nbsp;&copy;&nbsp; 2025 &ndash; <span id="year"></span>. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const revealCards = document.querySelectorAll('.reveal-card');
+    if ('IntersectionObserver' in window) {
+      const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealCards.forEach(el => cardObserver.observe(el));
+    } else {
+      revealCards.forEach(el => el.classList.add('is-visible'));
+    }
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navHidden = document.getElementById("navHidden");
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      navHidden.style.display = navHidden.style.display === "block" ? "none" : "block";
+    });
+    document.addEventListener("click", function (e) {
+      if (!navHidden.contains(e.target) && !menuToggle.contains(e.target)) {
+        navHidden.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
